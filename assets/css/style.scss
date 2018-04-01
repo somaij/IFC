@@ -1,0 +1,40 @@
+/**!
+Theme Name: IFC
+Theme URI: https://github.com/somaij/IFC
+Description: A theme for the Islamic Forum of Canada
+Version: 0.0.1
+Author: Jason Somai, Muzzammill Abdur-Razak, Prateem Shrestha, Yatin Mistry
+Author URI: http://jasonsomai.com
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ifc-theme
+*/
+
+/* ----------------------------------------------------------------------------
+ * Mixins & Variables
+ * ------------------------------------------------------------------------- */
+@import "partials/mixins";
+@import "partials/variables";
+
+/* ----------------------------------------------------------------------------
+ * Normalize & Santize
+ * ------------------------------------------------------------------------- */
+@import "vendor/normalize";
+@import "vendor/sanitize";
+
+/* Bootstrap Grid */
+@import "vendor/bootstrap-grid.min";
+
+/* ----------------------------------------------------------------------------
+ * Structure
+ * ------------------------------------------------------------------------- */
+@import "partials/structure";
+
+/* WPCore */
+@import "partials/wpcore";
+
+/* Base */
+@import "partials/base";
+
+
+
