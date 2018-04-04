@@ -202,9 +202,15 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 #wp-calendar tfoot #next{font-size:10px;text-transform:uppercase;text-align:right}
 #wp-calendar tfoot #prev{font-size:10px;text-transform:uppercase;padding-top:10px}
 .size-auto,.size-full,.size-large,.size-medium,.size-thumbnail{max-width:100%;height:auto}
-.black-on-left{background:black;background:-webkit-gradient(left bottom,right top,color-stop(0,black),color-stop(100%,rgba(0,0,0,0.7)));background:-webkit-linear-gradient(45deg,black 0,rgba(0,0,0,0.7) 100%);background:linear-gradient(45deg,black 0,rgba(0,0,0,0.7) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#000000',GradientType=1)}
-.black-on-right{background:rgba(0,0,0,0.7);background:-webkit-gradient(left bottom,right top,color-stop(0,rgba(0,0,0,0.7)),color-stop(100%,black));background:-webkit-linear-gradient(45deg,rgba(0,0,0,0.7) 0,black 100%);background:linear-gradient(45deg,rgba(0,0,0,0.7) 0,black 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#000000',GradientType=1)}
-#blog-preview{color:#FFF}
+.cta{padding:1rem}
+.cta p{font-size:1.1rem}
+.cta a.btn{background-color:#FFF;color:#444;padding:.4rem 1.2rem;border-radius:7px;text-align:left;display:block;font-weight:bold}
+.light-brown-on-left{color:#FFF;background:#b87a63;background:-webkit-gradient(left bottom,right top,color-stop(0,#b87a63),color-stop(100%,#cd9d80));background:-webkit-linear-gradient(45deg,#b87a63 0,#cd9d80 100%);background:linear-gradient(45deg,#b87a63 0,#cd9d80 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b87a63',endColorstr='#cd9d80',GradientType=1)}
+.light-brown-on-left a.btn{color:#b87963}
+.dark-brown-on-left{color:#FFF;background:#301f16;background:-webkit-gradient(left bottom,right top,color-stop(0,#301f16),color-stop(100%,#5a3a29));background:-webkit-linear-gradient(45deg,#301f16 0,#5a3a29 100%);background:linear-gradient(45deg,#301f16 0,#5a3a29 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#301f16',endColorstr='#5a3a29',GradientType=1)}
+.blue-on-left{color:#FFF;background:#0d82a6;background:-webkit-gradient(left bottom,right top,color-stop(0,#0d82a6),color-stop(100%,#17bdcf));background:-webkit-linear-gradient(45deg,#0d82a6 0,#17bdcf 100%);background:linear-gradient(45deg,#0d82a6 0,#17bdcf 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0d82a6',endColorstr='#17bdcf',GradientType=1)}
+.black-on-left{background:black;background:-webkit-gradient(left bottom,right top,color-stop(0,black),color-stop(100%,rgba(0,0,0,0.7)));background:-webkit-linear-gradient(45deg,black 0,rgba(0,0,0,0.7) 100%);background:linear-gradient(45deg,black 0,rgba(0,0,0,0.7) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#000000',GradientType=1);color:#FFF}
+.black-on-right{background:rgba(0,0,0,0.7);background:-webkit-gradient(left bottom,right top,color-stop(0,rgba(0,0,0,0.7)),color-stop(100%,black));background:-webkit-linear-gradient(45deg,rgba(0,0,0,0.7) 0,black 100%);background:linear-gradient(45deg,rgba(0,0,0,0.7) 0,black 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#000000',GradientType=1);color:#FFF}
 #blog-preview .post{height:250px;padding:2rem;border-radius:7px}
 #blog-preview .post h3{font-size:2rem}
 #blog-preview a{color:#FFF;font-weight:bold}
