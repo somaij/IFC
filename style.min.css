@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i");/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i");@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:600,600i,700,700i,900,900i");/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
@@ -174,6 +174,7 @@ a:focus{outline:0}
 a:hover,a:active{outline:0}
 input:focus{outline:0;border:1px solid #444}
 select{width:100%}
+.text-right{text-align:right}
 .alignnone{margin:5px 20px 20px 0}
 .aligncenter,div.aligncenter{display:block;margin:5px auto 5px auto}
 .alignright{float:right;margin:5px 0 20px 20px}
@@ -202,6 +203,13 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 #wp-calendar tfoot #next{font-size:10px;text-transform:uppercase;text-align:right}
 #wp-calendar tfoot #prev{font-size:10px;text-transform:uppercase;padding-top:10px}
 .size-auto,.size-full,.size-large,.size-medium,.size-thumbnail{max-width:100%;height:auto}
+h1,h2,h3,h4,h5,h6{font-family:'Nunito Sans','Lato',sans-serif}
+h1{font-weight:900;color:#222}
+h2{font-weight:700;color:#333}
+header{font-family:'Nunito Sans',sans-serif;box-shadow:0 3px 3px rgba(0,0,0,0.2);padding:1.6rem 1rem;width:100%;background:#fff;font-size:20px;color:#444;margin-bottom:2rem;z-index:10}
+header nav{font-weight:900}
+header nav ul li{display:inline-block}
+header nav ul li:not(last-child){margin-right:.6rem}
 .cta{padding:1rem}
 .cta p{font-size:1.1rem}
 .cta a.btn{background-color:#FFF;color:#444;padding:.4rem 1.2rem;border-radius:7px;text-align:left;display:block;font-weight:bold}
@@ -211,6 +219,9 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 .blue-on-left{color:#FFF;background:#0d82a6;background:-webkit-gradient(left bottom,right top,color-stop(0,#0d82a6),color-stop(100%,#17bdcf));background:-webkit-linear-gradient(45deg,#0d82a6 0,#17bdcf 100%);background:linear-gradient(45deg,#0d82a6 0,#17bdcf 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0d82a6',endColorstr='#17bdcf',GradientType=1)}
 .black-on-left{background:black;background:-webkit-gradient(left bottom,right top,color-stop(0,black),color-stop(100%,rgba(0,0,0,0.7)));background:-webkit-linear-gradient(45deg,black 0,rgba(0,0,0,0.7) 100%);background:linear-gradient(45deg,black 0,rgba(0,0,0,0.7) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#000000',GradientType=1);color:#FFF}
 .black-on-right{background:rgba(0,0,0,0.7);background:-webkit-gradient(left bottom,right top,color-stop(0,rgba(0,0,0,0.7)),color-stop(100%,black));background:-webkit-linear-gradient(45deg,rgba(0,0,0,0.7) 0,black 100%);background:linear-gradient(45deg,rgba(0,0,0,0.7) 0,black 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#000000',GradientType=1);color:#FFF}
+#masthead{height:100vh;background-size:cover;background-repeat:no-repeat;color:#FFF !important}
+#masthead h1{font-size:64px;color:inherit}
+#masthead h2{font-size:48px;color:inherit}
 #blog-preview .post{height:250px;padding:2rem;border-radius:7px}
 #blog-preview .post h3{font-size:2rem}
 #blog-preview a{color:#FFF;font-weight:bold}

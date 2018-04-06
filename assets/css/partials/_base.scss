@@ -1,6 +1,40 @@
 /**
  * Base SCSS
  */
+/* Typography */
+h1,h2,h3,h4,h5,h6{
+    font-family:'Nunito Sans', 'Lato', sans-serif;
+}
+h1{
+    font-weight:900;
+    color:#222;
+}
+h2{
+    font-weight:700;
+    color:#333;
+}
+/** Header **/
+header{
+    font-family:'Nunito Sans', sans-serif;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    padding:1.6rem 1rem;
+    width:100%;
+    background:#fff;
+    font-size:20px;
+    color:#444;
+    margin-bottom:2rem;
+    z-index:10;
+    nav{
+        font-weight:900;
+        ul li{
+            display:inline-block;
+            &:not(last-child){
+                margin-right:0.6rem;
+            }
+        }
+        
+    }
+}
 /** Site Wide Blocks **/
 .cta{
     padding:1rem;
@@ -91,7 +125,20 @@
 }
 
 /** Homepage Styles **/
-
+#masthead{
+    height:100vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    color:#FFF !important;
+    h1{
+        font-size:64px;
+        color:inherit;
+    }
+    h2{
+        font-size:48px;
+        color:inherit;
+    }
+}
 #blog-preview {
 
     .post {
