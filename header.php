@@ -22,27 +22,22 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-
 	<header>
         <div class="container-fluid">
             <div class="row">
-                <div class="site-branding col-2">
-			<?php
-			the_custom_logo();?>IFC  
-		</div><!-- .site-branding -->
-                <nav id="site-navigation" class="main-navigation col-10 text-right">
-			<button class="menu-toggle d-block d-md-none" aria-controls="primary-menu" aria-expanded="false">=</button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+				<div class="site-branding col-2">
+					<?php the_custom_logo();?>
+				</div>
+				<nav id="site-navigation" class="main-navigation col-10 text-right">
+					<button class="menu-toggle d-block d-md-none" aria-controls="primary-menu" aria-expanded="false">=</button>
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
+					?>
+				</nav><!-- #site-navigation -->
             </div>
         </div>
-		
-
-		
 	</header><!-- #masthead -->
 
