@@ -167,6 +167,7 @@ header{
     background-size:cover;
     background-repeat: no-repeat;
     color:#FFF !important;
+    background-attachment: fixed;
     .main-text{
         margin:4rem 0;
         @media screen and (min-width:1200px){
@@ -213,12 +214,35 @@ header{
         font-size:18px;
     }
 }
-#blogevents{
+#blogsevents{
     background-size:cover;
     color:#FFF;
-    .section-header{
-        color:inherit;
+    h2{
+        color:#FFF;
         font-weight:900;
+        margin-bottom:1rem;
+    }
+    background-attachment: fixed;
+    padding:1rem 0;
+}
+#events-preview{
+    .event{
+        height:175px;
+        padding: 0.6rem 1rem;
+        border-radius: 7px;
+        font-size:14px;
+        display:inline-flex;
+        flex-direction:column;
+        justify-content: space-around;
+        h3 {
+            font-size: 1.6rem;
+
+        }
+        a{
+            float:right;
+            margin-top:0.2rem;
+            align-self:flex-end;
+        }
     }
 }
 #blog-preview {
@@ -236,5 +260,20 @@ header{
     a {
         color: #FFF;
         font-weight: bold;
+    }
+}
+.section-header-links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-style:italic;
+    
+    a{
+        color:#FFF;
+        font-weight:bold;
+    }
+    .divider{
+        font-weight:bold;
+        margin:0 0.5rem;
     }
 }

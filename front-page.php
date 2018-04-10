@@ -11,7 +11,8 @@ get_header();
                 <div class="col text-right main-text">
                     <h2>From Our Family to Yours</h2>
                     <h1>Welcome Home</h1>
-                    <a href="#" class="btn blue">Donate Now</a><a href="#" class="btn light-brown">Find Out More</a>
+                    <a href="#" class="btn blue">Donate Now</a>
+                    <a href="#" class="btn light-brown">Find Out More</a>
                 </div>
             </div>
         </div>
@@ -26,8 +27,9 @@ get_header();
                     <div class="col">
                         <h3>Our Beliefs and Values</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p><br>
-                            <a href="#" class="btn light-brown">Read More</a>
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                        <br>
+                        <a href="#" class="btn light-brown">Read More</a>
                     </div>
                     <div class="col text-right">
                         <h3>Prayer Times</h3>
@@ -48,28 +50,143 @@ get_header();
     <section class="cta light-brown-on-left">
         <div class="container">
             <div class="row">
-                <div class="col d-flex flex-direction-row align-items-center justify-content-around"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p> <a href="#" class="btn">Learn More</a></div>
+                <div class="col d-flex flex-direction-row align-items-center justify-content-around">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                        rem aperiam</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
             </div>
         </div>
     </section>
     <div id="blogsevents" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/eventsblogs.jpg;">
-    <section id="blog-preview">
-        <div class="container">
-        <div class="row"><div class="col"><h2 class="section-header">Blog</h2></div>
-            <div class="row justify-content-between">
-                <div class="col post black-on-left">
-                    <h3>Test</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <a href="#">Read More</a>
+        <section id="events-preview">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="section-header">Events</h2>
+                    </div>
+                    <div class="col text-right section-header-links">
+                        <a href="#">View Calendar </a>
+                        <span class="divider">|</span>
+                        <a href="#"> See Event List</a>
+                    </div>
                 </div>
-                <div class="col ml-auto post black-on-right text-right">
-                    <h3>Test</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <a href="#">Read More</a>
+                <div class="row">
+                    <div class="events-carousel owl-carousel owl-theme">
+                        <div class="col event black-on-left">
+                            <h3>Event 1</h3>
+                            <p>123 St.
+                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
+                            <a href="#" class="btn blue text-right">See Event</a>
+                        </div>
+                        <div class="col event black-on-left">
+                            <h3>Event 2</h3>
+                            <p>123 St.
+                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
+                            <a href="#" class="btn blue text-right">See Event</a>
+                        </div>
+                        <div class="col event black-on-left">
+                            <h3>Event 3</h3>
+                            <p>123 St.
+                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
+                            <a href="#" class="btn blue text-right">See Event</a>
+                        </div>
+                        <div class="col event black-on-left">
+                            <h3>Event 4</h3>
+                            <p>123 St.
+                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
+                            <a href="#" class="btn blue text-right">See Event</a>
+                        </div>
+                        <div class="col event black-on-left">
+                            <h3>Event 5</h3>
+                            <p>123 St.
+                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
+                            <a href="#" class="btn blue text-right">See Event</a>
+                        </div>
+                        <div class="col event black-on-left">
+                            <h3>Event 6</h3>
+                            <p>123 St.
+                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
+                            <a href="#" class="btn blue text-right">See Event</a>
+                        </div>
+                        <div class="col event black-on-left">
+                            <h3>Event 7</h3>
+                            <p>123 St.
+                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
+                            <a href="#" class="btn blue text-right">See Event</a>
+                        </div>
+                        <div class="col event black-on-left">
+                            <h3>Event 8</h3>
+                            <p>123 St.
+                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
+                            <a href="#" class="btn blue text-right">See Event</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section id="blog-preview">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="section-header">Blog</h2>
+                    </div>
+                    <div class="col text-right section-header-links">
+                        <a href="#">See All Blogs</a>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col post black-on-left">
+                        <h3>Test</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                            dicta sunt explicabo.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <div class="col ml-auto post black-on-right text-right">
+                        <h3>Test</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                            dicta sunt explicabo.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </div>
+    <section class="cta dark-brown-on-left">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex flex-direction-row align-items-center justify-content-around">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                            totam rem aperiam</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <script>
+        jQuery(function ($) {
+            $(document).ready(function () {
+                $(".events-carousel").owlCarousel({
+                    loop: true,
+                    nav: true,
+                    margin: 15,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 2
+                        },
+                        1000: {
+                            items: 4
+                        }
+                    }
+                });
+            });
+        });
+    </script>
     <?php
 get_footer();
