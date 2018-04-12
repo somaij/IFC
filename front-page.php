@@ -177,6 +177,13 @@ get_header();
                     </div>
                 </div>
     </div>
+    <div class="container">
+                   <div class="row">
+                       <div class="col">
+                           <?php echo do_shortcode('[foogallery id="4341"]'); ?>
+                       </div>
+                   </div>
+    </div>
 </section>
     <script>
         jQuery(function ($) {
