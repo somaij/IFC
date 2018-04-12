@@ -166,6 +166,18 @@ get_header();
                 </div>
             </div>
         </section>
+<section id="gallery-preview">
+               <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="section-header">Gallery</h2>
+                    </div>
+                    <div class="col text-right section-header-links">
+                        <a href="#">View Gallery</a>
+                    </div>
+                </div>
+    </div>
+</section>
     <script>
         jQuery(function ($) {
             $(document).ready(function () {
