@@ -185,6 +185,25 @@ get_header();
                    </div>
     </div>
 </section>
+<section id="testimonials-preview" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/mast-1.jpg;">
+        <div class="container">
+            <div class="row">
+                <div class="testimonials-carousel owl-carousel owl-theme">
+                <?php 
+                $args = array( 'post_type' => 'testimonials', 'posts_per_page' => 10 );
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post();
+  echo '<div class="col testimonial">';
+  the_field( 'quote_text' );
+  the_field( 'testimonial_author' ); 
+                    
+  echo '</div>';
+endwhile;
+                ?>
+            </div>
+            </div>
+        </div>
+</section>
     <script>
         jQuery(function ($) {
             $(document).ready(function () {
@@ -203,6 +222,11 @@ get_header();
                             items: 4
                         }
                     }
+                });
+                $(".testimonials-carousel").owlCarousel({
+                    loop: true,
+                    nav: true,
+                    items:1                    
                 });
             });
         });

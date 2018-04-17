@@ -349,3 +349,12 @@ header {
         background-position: -400px 0;
     }
 }
+
+#testimonials-preview{
+    padding:1rem 0;
+    .testimonial{
+        background-color:rgba(255,255,255,0.7);
+        padding:2rem;
+        border-radius:7px;
+    }
+}
