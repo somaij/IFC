@@ -176,8 +176,6 @@ get_header();
                         <a href="#">View Gallery</a>
                     </div>
                 </div>
-    </div>
-    <div class="container">
                    <div class="row">
                        <div class="col">
                            <?php echo do_shortcode('[foogallery id="4341"]'); ?>
@@ -187,15 +185,23 @@ get_header();
 </section>
 <section id="testimonials-preview" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/mast-1.jpg;">
         <div class="container">
+                            <div class="row">
+                    <div class="col">
+                        <h2 class="section-header">In the Community</h2>
+                    </div>
+                    <div class="col text-right section-header-links">
+                        <a href="#">View Testimonials</a>
+                    </div>
+                </div>
             <div class="row">
                 <div class="testimonials-carousel owl-carousel owl-theme">
                 <?php 
                 $args = array( 'post_type' => 'testimonials', 'posts_per_page' => 10 );
 $loop = new WP_Query( $args );
 while ( $loop->have_posts() ) : $loop->the_post();
-  echo '<div class="col testimonial">';
-  the_field( 'quote_text' );
-  the_field( 'testimonial_author' ); 
+  echo '<div class="col"><div class="row testimonial"><div class="col-1 big-q">"</div><div class="col">';
+  echo '<h3>'; the_field( 'quote_text' ); echo '</h3>';
+  echo '<p class="footer"><em class="author">— '; the_field( 'testimonial_author' ); echo '</em><a href="#" class="text-right">Read More</a></p></div>';
                     
   echo '</div>';
 endwhile;

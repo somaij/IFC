@@ -351,10 +351,35 @@ header {
 }
 
 #testimonials-preview{
+    h2{
+        color:#FFF;
+        font-weight:900;
+    }
+    .big-q{
+        color:$light-brown;
+        font-size:108px;
+        font-weight:900;
+        line-height:1;
+        font-family:'Nunito Sans', 'Lato', sans-serif;
+    }
+    .author{
+        font-size:1.5rem;
+    }
     padding:1rem 0;
     .testimonial{
         background-color:rgba(255,255,255,0.7);
         padding:2rem;
         border-radius:7px;
+        margin:1rem;
+        h3{
+            font-size: 28px;
+font-weight: 500;
+font-family: 'Lato', sans-serif;
+font-style: italic;
+
+        }
+    }
+    .footer, .footer a{
+        color:$light-brown;
     }
 }

@@ -175,7 +175,7 @@ a:hover,a:active{outline:0}
 input:focus{outline:0;border:1px solid #444}
 select{width:100%}
 .text-center{text-align:center}
-.text-right{text-align:right}
+.text-right{text-align:right;display:inline-block;float:right}
 .alignnone{margin:5px 20px 20px 0}
 .aligncenter,div.aligncenter{display:block;margin:5px auto 5px auto}
 .alignright{float:right;margin:5px 0 20px 20px}
@@ -254,7 +254,12 @@ header nav ul li:not(last-child){margin-right:.6rem}
 #gallery-preview:after{background-image:url("data:image/svg+xml,%3Csvg width='80' height='88' viewBox='0 0 80 88' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 21.91V26h-2c-9.94 0-18 8.06-18 18 0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73 3.212-6.99 9.983-12.008 18-12.73V62h2c9.94 0 18-8.06 18-18 0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73-3.212 6.99-9.983 12.008-18 12.73zM54 58v4.696c-5.574 1.316-10.455 4.428-14 8.69-3.545-4.262-8.426-7.374-14-8.69V58h-5.993C12.27 58 6 51.734 6 44c0-7.732 6.275-14 14.007-14H26v-4.696c5.574-1.316 10.455-4.428 14-8.69 3.545 4.262 8.426 7.374 14 8.69V30h5.993C67.73 30 74 36.266 74 44c0 7.732-6.275 14-14.007 14H54zM42 88c0-9.94 8.06-18 18-18h2v-4.09c8.016-.722 14.787-5.738 18-12.73v7.434c-3.545 4.262-8.426 7.374-14 8.69V74h-5.993C52.275 74 46 80.268 46 88h-4zm-4 0c0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73v7.434c3.545 4.262 8.426 7.374 14 8.69V74h5.993C27.73 74 34 80.266 34 88h4zm4-88c0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73v-7.434c-3.545-4.262-8.426-7.374-14-8.69V14h-5.993C52.27 14 46 7.734 46 0h-4zM0 34.82c3.213-6.992 9.984-12.008 18-12.73V18h2c9.94 0 18-8.06 18-18h-4c0 7.732-6.275 14-14.007 14H14v4.696c-5.574 1.316-10.455 4.428-14 8.69v7.433z' fill='%23b87963' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");width:100%;height:100%;position:absolute;-webkit-animation:slide 30s linear infinite;margin:0 auto;content:' ';top:0}
 #gallery-preview .section-header-links a{color:#444;z-index:3}
 #testimonials-preview{padding:1rem 0}
-#testimonials-preview .testimonial{background-color:rgba(255,255,255,0.7);padding:2rem;border-radius:7px}
+#testimonials-preview h2{color:#FFF;font-weight:900}
+#testimonials-preview .big-q{color:#b87963;font-size:108px;font-weight:900;line-height:1;font-family:'Nunito Sans','Lato',sans-serif}
+#testimonials-preview .author{font-size:1.5rem}
+#testimonials-preview .testimonial{background-color:rgba(255,255,255,0.7);padding:2rem;border-radius:7px;margin:1rem}
+#testimonials-preview .testimonial h3{font-size:28px;font-weight:500;font-family:'Lato',sans-serif;font-style:italic}
+#testimonials-preview .footer,#testimonials-preview .footer a{color:#b87963}
 .owl-carousel{display:none;width:100%;-webkit-tap-highlight-color:transparent;position:relative;z-index:1}
 .owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y;touch-action:manipulation;-moz-backface-visibility:hidden}
 .owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
