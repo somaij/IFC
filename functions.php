@@ -45,6 +45,9 @@ if ( ! function_exists( 'ifc_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'ifc' ),
+            'footer-1' => esc_html__( 'Footer-1', 'ifc' ),
+            'footer-2' => esc_html__( 'Footer-2', 'ifc' ),
+            'footer-3' => esc_html__( 'Footer-3', 'ifc' ),
 		) );
 
 		/*
