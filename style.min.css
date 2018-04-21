@@ -260,6 +260,13 @@ header nav ul li:not(last-child){margin-right:.6rem}
 #testimonials-preview .testimonial{background-color:rgba(255,255,255,0.7);padding:2rem;border-radius:7px;margin:1rem}
 #testimonials-preview .testimonial h3{font-size:28px;font-weight:500;font-family:'Lato',sans-serif;font-style:italic}
 #testimonials-preview .footer,#testimonials-preview .footer a{color:#b87963}
+footer{padding:1.7rem 0 0;background-color:#EEE}
+footer h4{color:#b87963;font-size:1.6rem;font-weight:900}
+footer li{list-style:none;font-size:1.4rem;padding:.2rem 0}
+footer address{font-weight:700}
+footer address h6{color:#b87963}
+footer #copyright{background:#CCC;font-weight:700;text-align:center;padding:.7rem;margin-top:2rem}
+footer #copyright a{color:#b87963}
 .owl-carousel{display:none;width:100%;-webkit-tap-highlight-color:transparent;position:relative;z-index:1}
 .owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y;touch-action:manipulation;-moz-backface-visibility:hidden}
 .owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}

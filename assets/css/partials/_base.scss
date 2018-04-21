@@ -383,3 +383,34 @@ font-style: italic;
         color:$light-brown;
     }
 }
+footer{
+    padding:1.7rem 0 0;
+    background-color:#EEE;
+    h4{
+        color:$light-brown;
+        font-size:1.6rem;
+        font-weight:900;
+    }
+    li{
+        list-style: none;
+        font-size:1.4rem;
+        padding:0.2rem 0;
+        
+    }
+    address{
+        h6{
+            color:$light-brown;
+        }
+        font-weight:700;
+    }
+    #copyright{
+        background:#CCC;
+        font-weight:700;
+        text-align:center;
+        padding:0.7rem;
+        margin-top:2rem;
+        a{
+            color:$light-brown;
+        }
+    }
+}

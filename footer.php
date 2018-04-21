@@ -40,6 +40,28 @@
 					) );
 					?>
             </div>
+            <div class="col-md-3">
+                <img src="http://via.placeholder.com/240x120">
+                <address>
+                    <h6>Islamic Forum of Canada</h6>
+                    200 Advance Blvd.<br>
+                    Brampton, ON<br>
+                    L6T 4V4
+                </address>
+                <a href="tel:9057990763"><strong>905-799-0763</strong></a><br>
+                <a href="#"><strong>Facebook</strong></a>
+                
+            </div>
+        </div>
+        
+    </div>
+    <div id="copyright">
+        <div class="container">
+        <div class="row">
+            <div class="col">
+                Islamic Forum of Canada © <?php echo date("Y");?>. All Rights Reserved. | <a href="#">Sitemap</a>
+            </div>
+            </div>
         </div>
     </div>
 </footer>
