@@ -8,7 +8,7 @@ get_header();
     <div id="masthead" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/mast-1.jpg;">
         <div class="container">
             <div class="row">
-                <div class="col text-right main-text">
+                <div class="col main-text">
                     <h2>From Our Family to Yours</h2>
                     <h1>Welcome Home</h1>
                     <a href="#" class="btn blue">Donate Now</a>
@@ -31,7 +31,7 @@ get_header();
                         <br>
                         <a href="#" class="btn light-brown">Read More</a>
                     </div>
-                    <div class="col text-right">
+                    <div class="col prayer-times">
                         <h3>Prayer Times</h3>
                         <ul class="pt">
                             <li>Today</li>

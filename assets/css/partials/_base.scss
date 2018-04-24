@@ -98,6 +98,29 @@ header {
         }
 
     }
+    .menu-toggle{
+        height:100%;
+        color:$light-brown;
+    }
+    .mobile-nav{
+        padding:1rem;
+        position: absolute;
+        z-index:3;
+        display:none;
+        right:0;
+        text-align: right;
+        width:200px;
+        ul li{
+            list-style: none;
+            padding:0.2rem 0;
+            a{
+                color:#FFF;
+            }
+            
+        }
+        
+        font-weight:900;
+    }
 }
 
 /** Site Wide Blocks **/
@@ -242,6 +265,12 @@ header {
     a {
         font-size: 18px;
     }
+    .main-text, .prayer-times{
+        @media screen and (min-width:992px){
+            text-align: right;
+        }
+    }
+    
 }
 
 #blogsevents {

@@ -48,8 +48,8 @@
                     Brampton, ON<br>
                     L6T 4V4
                 </address>
-                <a href="tel:9057990763"><strong>905-799-0763</strong></a><br>
-                <a href="#"><strong>Facebook</strong></a>
+                <a href="tel:9057990763"><i class="fas fa-phone"></i><strong>905-799-0763</strong></a><br>
+                <a href="#"><i class="fab fa-facebook-f"></i><strong>Facebook</strong></a>
                 
             </div>
         </div>
@@ -65,7 +65,20 @@
         </div>
     </div>
 </footer>
-
+<script>
+    jQuery(function ($) {
+    $('.menu-toggle').click(function(){
+  $('.mobile-nav').toggle();
+});
+ 
+$(document).click(function(e) {
+  var target = e.target;
+  if (!$(target).is('.menu-toggle') && !$(target).parents().is('.menu-toggle')) {
+    $('.mobile-nav').hide();
+  }
+});
+        });
+</script>
 <?php wp_footer(); ?>
 
 </body>
