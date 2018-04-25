@@ -6,5 +6,3 @@
  * @since 1.0.0
  */
 console.log( 'CustomJS' );
-
-// Dropdown toggle

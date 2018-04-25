@@ -29,7 +29,7 @@
 					<?php the_custom_logo();?>
 				</div>
 				<nav id="site-navigation" class="main-navigation col-10 text-right">
-					<div class="d-none d-md-block">
+					<div class="d-none d-md-inline">
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',

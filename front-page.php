@@ -23,15 +23,15 @@ get_header();
                         <h4>Next Upcoming Event:</h4>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
+                <div class="row flex-row-reverse flex-md-row">
+                    <div class="col-12 col-md-6" >
                         <h3>Our Beliefs and Values</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
                         <br>
                         <a href="#" class="btn light-brown">Read More</a>
                     </div>
-                    <div class="col prayer-times">
+                    <div class="col-12 col-md-6 prayer-times">
                         <h3>Prayer Times</h3>
                         <ul class="pt">
                             <li>Today</li>
@@ -136,20 +136,24 @@ get_header();
                     </div>
                 </div>
                 <div class="row justify-content-between">
-                    <div class="col post black-on-left">
+                    <div class="col-12 col-lg-6">
+                    <div class=" post black-on-left">
                         <h3>Test</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                             totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                             dicta sunt explicabo.</p>
                         <a href="#">Read More</a>
                     </div>
-                    <div class="col ml-auto post black-on-right text-right">
+                        </div>
+                    <div class="col-12 col-lg-6 ">
+                    <div class="ml-auto post black-on-right text-right">
                         <h3>Test</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                             totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                             dicta sunt explicabo.</p>
                         <a href="#">Read More</a>
                     </div>
+                        </div>
                 </div>
             </div>
         </section>
@@ -158,7 +162,7 @@ get_header();
     <section class="cta dark-brown-on-left">
             <div class="container">
                 <div class="row">
-                    <div class="col d-flex flex-direction-row align-items-center justify-content-around">
+                    <div class="col d-flex flex-column flex-lg-row align-items-center justify-content-around">
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                             totam rem aperiam</p>
                         <a href="#" class="btn">Learn More</a>
