@@ -98,36 +98,36 @@ header {
         }
 
     }
-    .menu-toggle{
-        height:100%;
-        color:$light-brown;
+    .menu-toggle {
+        height: 100%;
+        color: $light-brown;
         position: absolute;
-        right:0;
-        padding:0.8rem 1.2rem;
-        &.open{
-            
+        right: 0;
+        padding: 0.8rem 1.2rem;
+        &.open {
+
             @extend .dark-brown-on-left;
-            color:#FFF;
+            color: #FFF;
         }
     }
-    .mobile-nav{
-        padding:1rem;
+    .mobile-nav {
+        padding: 1rem;
         position: absolute;
-        z-index:3;
-        display:none;
-        right:0;
+        z-index: 3;
+        display: none;
+        right: 0;
         text-align: right;
-        width:200px;
-        margin-right:16px;
-        ul li{
+        width: 200px;
+        margin-right: 16px;
+        ul li {
             list-style: none;
-            padding:0.2rem 0;
-            a{
-                color:#FFF;
+            padding: 0.2rem 0;
+            a {
+                color: #FFF;
             }
-            
+
         }
-        
+
         font-weight:900;
     }
 }
@@ -147,7 +147,7 @@ header {
         text-align: left;
         display: block;
         font-weight: bold;
-        min-width:150px;
+        min-width: 150px;
         text-align: center;
 
     }
@@ -276,12 +276,13 @@ header {
     a {
         font-size: 18px;
     }
-    .main-text, .prayer-times{
-        @media screen and (min-width:992px){
+    .main-text,
+    .prayer-times {
+        @media screen and (min-width: 992px) {
             text-align: right;
         }
     }
-    
+
 }
 
 #blogsevents {
@@ -320,7 +321,9 @@ header {
 #blog-preview {
 
     .post {
-        height: 210px;
+        @media screen and (min-width: 500px) {
+            height: 210px;
+        }
         padding: 0.6rem 2rem;
         border-radius: 7px;
         margin: 1rem;
@@ -359,10 +362,10 @@ header {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5481e', endColorstr='#a86c5a', GradientType=1);
     color: #FFF;
     position: relative;
-    padding:1rem 0;
-    h2{
-        font-weight:900;
-        z-index:3;
+    padding: 1rem 0;
+    h2 {
+        font-weight: 900;
+        z-index: 3;
     }
     &:after {
         background-image: url("data:image/svg+xml,%3Csvg width='80' height='88' viewBox='0 0 80 88' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 21.91V26h-2c-9.94 0-18 8.06-18 18 0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73 3.212-6.99 9.983-12.008 18-12.73V62h2c9.94 0 18-8.06 18-18 0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73-3.212 6.99-9.983 12.008-18 12.73zM54 58v4.696c-5.574 1.316-10.455 4.428-14 8.69-3.545-4.262-8.426-7.374-14-8.69V58h-5.993C12.27 58 6 51.734 6 44c0-7.732 6.275-14 14.007-14H26v-4.696c5.574-1.316 10.455-4.428 14-8.69 3.545 4.262 8.426 7.374 14 8.69V30h5.993C67.73 30 74 36.266 74 44c0 7.732-6.275 14-14.007 14H54zM42 88c0-9.94 8.06-18 18-18h2v-4.09c8.016-.722 14.787-5.738 18-12.73v7.434c-3.545 4.262-8.426 7.374-14 8.69V74h-5.993C52.275 74 46 80.268 46 88h-4zm-4 0c0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73v7.434c3.545 4.262 8.426 7.374 14 8.69V74h5.993C27.73 74 34 80.266 34 88h4zm4-88c0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73v-7.434c-3.545-4.262-8.426-7.374-14-8.69V14h-5.993C52.27 14 46 7.734 46 0h-4zM0 34.82c3.213-6.992 9.984-12.008 18-12.73V18h2c9.94 0 18-8.06 18-18h-4c0 7.732-6.275 14-14.007 14H14v4.696c-5.574 1.316-10.455 4.428-14 8.69v7.433z' fill='%23b87963' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
@@ -375,9 +378,9 @@ header {
         top: 0;
 
     }
-    .section-header-links a{
-        color:#444;
-        z-index:3;
+    .section-header-links a {
+        color: #444;
+        z-index: 3;
     }
 }
 
@@ -390,67 +393,78 @@ header {
     }
 }
 
-#testimonials-preview{
-    h2{
-        color:#FFF;
-        font-weight:900;
+#testimonials-preview {
+    h2 {
+        color: #FFF;
+        font-weight: 900;
     }
-    .big-q{
-        color:$light-brown;
-        font-size:108px;
-        font-weight:900;
-        line-height:1;
-        font-family:'Nunito Sans', 'Lato', sans-serif;
+    .big-q {
+        color: $light-brown;
+        font-size: 108px;
+        font-weight: 900;
+        line-height: 1;
+        font-family: 'Nunito Sans', 'Lato', sans-serif;
+        @media screen and (max-width: 768px) {
+            font-size:36px;
+        }
+
     }
-    .author{
-        font-size:1.5rem;
+    .author {
+        font-size: 1.5rem;
+        @media screen and (max-width: 768px) {
+                font-size:1.2rem;
+            }
     }
     padding:1rem 0;
-    .testimonial{
-        background-color:rgba(255,255,255,0.7);
-        padding:2rem;
-        border-radius:7px;
-        margin:1rem;
-        h3{
+    .testimonial {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 2rem;
+        border-radius: 7px;
+        margin: 1rem;
+        h3 {
             font-size: 28px;
-font-weight: 500;
-font-family: 'Lato', sans-serif;
-font-style: italic;
-
+            font-weight: 500;
+            font-family: 'Lato', sans-serif;
+            font-style: italic;
+            @media screen and (max-width: 768px) {
+                font-size:16px;
+            }
         }
     }
-    .footer, .footer a{
-        color:$light-brown;
+    .footer,
+    .footer a {
+        color: $light-brown;
     }
 }
-footer{
-    padding:1.7rem 0 0;
-    background-color:#EEE;
-    h4{
-        color:$light-brown;
-        font-size:1.6rem;
-        font-weight:900;
+
+footer {
+    padding: 1.7rem 0 0;
+    background-color: #EEE;
+    h4 {
+        color: $light-brown;
+        font-size: 1.6rem;
+        font-weight: 900;
     }
-    li{
+    li {
         list-style: none;
-        font-size:1.4rem;
-        padding:0.2rem 0;
-        
+        font-size: 1.4rem;
+        padding: 0.2rem 0;
+
     }
-    address{
-        h6{
-            color:$light-brown;
+    address {
+        h6 {
+            color: $light-brown;
         }
         font-weight:700;
     }
-    #copyright{
-        background:#CCC;
-        font-weight:700;
-        text-align:center;
-        padding:0.7rem;
-        margin-top:2rem;
-        a{
-            color:$light-brown;
+    #copyright {
+        background: #CCC;
+        font-weight: 700;
+        text-align: center;
+        padding: 0.7rem;
+        margin-top: 2rem;
+        a {
+            color: $light-brown;
         }
     }
 }

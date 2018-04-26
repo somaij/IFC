@@ -221,6 +221,8 @@ endwhile;
                     loop: true,
                     nav: true,
                     margin: 15,
+                    stagePadding: 15,
+                    autoplay: true,
                     responsive: {
                         0: {
                             items: 1
@@ -236,6 +238,7 @@ endwhile;
                 $(".testimonials-carousel").owlCarousel({
                     loop: true,
                     nav: true,
+                    autoplay: true,
                     items:1                    
                 });
             });
