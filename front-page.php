@@ -24,10 +24,9 @@ get_header();
                     </div>
                 </div>
                 <div class="row flex-row-reverse flex-md-row">
-                    <div class="col-12 col-md-6" >
+                    <div class="col-12 col-md-6">
                         <h3>Our Beliefs and Values</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
                         <br>
                         <a href="#" class="btn light-brown">Read More</a>
                     </div>
@@ -50,9 +49,8 @@ get_header();
     <section class="cta light-brown-on-left">
         <div class="container">
             <div class="row">
-                <div class="col d-flex flex-direction-row align-items-center justify-content-around">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                        rem aperiam</p>
+                <div class="col d-flex flex-column flex-lg-row align-items-center justify-content-around">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
                     <a href="#" class="btn">Learn More</a>
                 </div>
             </div>
@@ -65,7 +63,7 @@ get_header();
                     <div class="col">
                         <h2 class="section-header">Events</h2>
                     </div>
-                    <div class="col text-right section-header-links">
+                    <div class="col-12 col-sm-6 section-header-links">
                         <a href="#">View Calendar </a>
                         <span class="divider">|</span>
                         <a href="#"> See Event List</a>
@@ -131,75 +129,66 @@ get_header();
                     <div class="col">
                         <h2 class="section-header">Blog</h2>
                     </div>
-                    <div class="col text-right section-header-links">
+                    <div class="col-12 col-sm-6 section-header-links">
                         <a href="#">See All Blogs</a>
                     </div>
                 </div>
                 <div class="row justify-content-between">
-                    <div class="col-12 col-lg-6">
-                    <div class=" post black-on-left">
+                    <div class="col-12 col-lg post black-on-left">
                         <h3>Test</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                            dicta sunt explicabo.</p>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                         <a href="#">Read More</a>
                     </div>
-                        </div>
-                    <div class="col-12 col-lg-6 ">
-                    <div class="ml-auto post black-on-right text-right">
+                    <div class="col-12 col-lg post black-on-left">
                         <h3>Test</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                            dicta sunt explicabo.</p>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                         <a href="#">Read More</a>
                     </div>
-                        </div>
                 </div>
             </div>
         </section>
-        
+
     </div>
     <section class="cta dark-brown-on-left">
-            <div class="container">
-                <div class="row">
-                    <div class="col d-flex flex-column flex-lg-row align-items-center justify-content-around">
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem aperiam</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex flex-column flex-lg-row align-items-center justify-content-around">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                    <a href="#" class="btn">Learn More</a>
                 </div>
             </div>
-        </section>
-<section id="gallery-preview">
-               <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h2 class="section-header">Gallery</h2>
-                    </div>
-                    <div class="col text-right section-header-links">
-                        <a href="#">View Gallery</a>
-                    </div>
-                </div>
-                   <div class="row">
-                       <div class="col">
-                           <?php echo do_shortcode('[foogallery id="4341"]'); ?>
-                       </div>
-                   </div>
-    </div>
-</section>
-<section id="testimonials-preview" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/mast-1.jpg;">
+        </div>
+    </section>
+    <section id="gallery-preview">
         <div class="container">
-                            <div class="row">
-                    <div class="col">
-                        <h2 class="section-header">In the Community</h2>
-                    </div>
-                    <div class="col text-right section-header-links">
-                        <a href="#">View Testimonials</a>
-                    </div>
+            <div class="row">
+                <div class="col">
+                    <h2 class="section-header">Gallery</h2>
                 </div>
+                <div class="col-12 col-sm-6 section-header-links">
+                    <a href="#">View Gallery</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <?php echo do_shortcode('[foogallery id="4341"]'); ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials-preview" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/mast-1.jpg;">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="section-header">In the Community</h2>
+                </div>
+                <div class="col-12 col-sm-3 section-header-links">
+                    <a href="#">View Testimonials</a>
+                </div>
+            </div>
             <div class="row">
                 <div class="testimonials-carousel owl-carousel owl-theme">
-                <?php 
+                    <?php 
                 $args = array( 'post_type' => 'testimonials', 'posts_per_page' => 10 );
 $loop = new WP_Query( $args );
 while ( $loop->have_posts() ) : $loop->the_post();
@@ -210,13 +199,13 @@ while ( $loop->have_posts() ) : $loop->the_post();
   echo '</div>';
 endwhile;
                 ?>
-            </div>
+                </div>
             </div>
         </div>
-</section>
+    </section>
     <script>
-        jQuery(function ($) {
-            $(document).ready(function () {
+        jQuery(function($) {
+            $(document).ready(function() {
                 $(".events-carousel").owlCarousel({
                     loop: true,
                     nav: true,
@@ -239,10 +228,11 @@ endwhile;
                     loop: true,
                     nav: true,
                     autoplay: true,
-                    items:1                    
+                    items: 1
                 });
             });
         });
+
     </script>
     <?php
 get_footer();

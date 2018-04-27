@@ -219,9 +219,11 @@ header nav ul li{display:inline-block}
 header nav ul li:not(last-child){margin-right:.6rem}
 header .menu-toggle{height:100%;color:#b87963;position:absolute;right:0;padding:.8rem 1.2rem}
 header .menu-toggle.open{color:#FFF}
-header .mobile-nav{padding:1rem;position:absolute;z-index:3;display:none;right:0;text-align:right;width:200px;margin-right:16px;font-weight:900}
-header .mobile-nav ul li{list-style:none;padding:.2rem 0}
-header .mobile-nav ul li a{color:#FFF}
+header .mobile-nav{position:absolute;z-index:3;display:none;right:0;text-align:right;margin-right:16px;font-weight:900}
+header .mobile-nav #primary-mobile-menu{width:200px}
+header .mobile-nav #primary-mobile-menu>li{list-style:none;padding:.4rem 1rem}
+header .mobile-nav #primary-mobile-menu>li:not(:last-of-type){border-bottom:1px solid rgba(255,255,255,0.2)}
+header .mobile-nav #primary-mobile-menu>li a{color:#FFF}
 .cta{padding:1rem}
 .cta p{font-size:1.1rem}
 .cta a.btn{background-color:#FFF;color:#444;padding:.4rem 1.2rem;border-radius:7px;text-align:left;display:block;font-weight:bold;min-width:150px;text-align:center}
@@ -236,22 +238,23 @@ header .mobile-nav ul li a{color:#FFF}
 #masthead .main-text a{font-size:20px}
 #masthead .main-text a:last-child{margin-left:1rem}
 #masthead .overlay{background-color:rgba(48,31,22,0.5);padding:1rem 0 2rem}
-#masthead h1{font-size:64px;color:inherit;font-weight:600;margin:0}
-#masthead h2{font-size:48px;color:inherit}
+#masthead h1{color:inherit;font-weight:600;margin:0}
+#masthead h2{font-size:1.5rem;color:inherit}
 #masthead h3{font-size:36px;font-weight:900}
 #masthead h4{font-weight:600;font-size:24px}
 #masthead p{font-size:18px}
 #masthead .pt li{list-style-type:none;font-size:18px}
 #masthead a{font-size:18px}
+#masthead .prayer-times{margin-top:1rem}
 #blogsevents{background-size:cover;color:#FFF;background-attachment:fixed;padding:1rem 0}
 #blogsevents h2{color:#FFF;font-weight:900;margin-bottom:1rem}
 #events-preview .event{height:175px;padding:.6rem 1rem;border-radius:7px;font-size:14px;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}
 #events-preview .event h3{font-size:1.6rem}
 #events-preview .event a{float:right;margin-top:.2rem;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}
-#blog-preview .post{padding:.6rem 2rem;border-radius:7px;margin:1rem}
+#blog-preview .post{padding:.6rem 2rem;border-radius:7px;margin-bottom:1rem}
 #blog-preview .post h3{font-size:2rem}
 #blog-preview a{color:#FFF;font-weight:bold}
-.section-header-links{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;font-style:italic}
+.section-header-links{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;font-style:italic}
 .section-header-links a{color:#FFF;font-weight:bold}
 .section-header-links .divider{font-weight:bold;margin:0 .5rem}
 #gallery-preview{background:#b5481e;background:-webkit-linear-gradient(45deg,#ddd 0,#fafafa 99%);background:linear-gradient(45deg,#ddd 0,#fafafa 99%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b5481e',endColorstr='#a86c5a',GradientType=1);color:#FFF;position:relative;padding:1rem 0}
@@ -318,7 +321,6 @@ footer #copyright a{color:#b87963}
 }@media(min-width:240px){.wp-caption .wp-caption-text,.gallery-caption{font:300 1.4rem/1.8rem sans-serif}
 }@media(min-width:320px){.wp-caption .wp-caption-text,.gallery-caption{font:300 1.55rem/1.8 sans-serif}
 }@media(min-width:480px){.wp-caption .wp-caption-text,.gallery-caption{font:300 1.8rem/1.8 sans-serif}
-}@media screen and (min-width:500px){#blog-preview .post{height:210px}
 }@media(min-width:576px){.container{max-width:540px}
 .col-sm{-ms-flex-preferred-size:0;-webkit-flex-basis:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;-webkit-flex-grow:1;flex-grow:1;max-width:100%}
 .col-sm-auto{-webkit-box-flex:0;-ms-flex:0 0 auto;-webkit-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}
@@ -399,6 +401,7 @@ footer #copyright a{color:#b87963}
 .align-self-sm-center{-ms-flex-item-align:center !important;-webkit-align-self:center !important;-ms-grid-row-align:center !important;align-self:center !important}
 .align-self-sm-baseline{-ms-flex-item-align:baseline !important;-webkit-align-self:baseline !important;align-self:baseline !important}
 .align-self-sm-stretch{-ms-flex-item-align:stretch !important;-webkit-align-self:stretch !important;-ms-grid-row-align:stretch !important;align-self:stretch !important}
+}@media screen and (min-width:576px){.section-header-links{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
 }@media(min-width:768px){.container{max-width:720px}
 .col-md{-ms-flex-preferred-size:0;-webkit-flex-basis:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;-webkit-flex-grow:1;flex-grow:1;max-width:100%}
 .col-md-auto{-webkit-box-flex:0;-ms-flex:0 0 auto;-webkit-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}
@@ -480,6 +483,9 @@ footer #copyright a{color:#b87963}
 .align-self-md-baseline{-ms-flex-item-align:baseline !important;-webkit-align-self:baseline !important;align-self:baseline !important}
 .align-self-md-stretch{-ms-flex-item-align:stretch !important;-webkit-align-self:stretch !important;-ms-grid-row-align:stretch !important;align-self:stretch !important}
 .wp-caption .wp-caption-text,.gallery-caption{font:300 1.9rem/1.7 sans-serif}
+}@media screen and (min-width:768px){#masthead h1{font-size:64px}
+#masthead h2{font-size:48px}
+#blog-preview .post{height:210px;margin:1rem}
 }@media(min-width:992px){.container{max-width:960px}
 .col-lg{-ms-flex-preferred-size:0;-webkit-flex-basis:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;-webkit-flex-grow:1;flex-grow:1;max-width:100%}
 .col-lg-auto{-webkit-box-flex:0;-ms-flex:0 0 auto;-webkit-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}
@@ -561,6 +567,8 @@ footer #copyright a{color:#b87963}
 .align-self-lg-baseline{-ms-flex-item-align:baseline !important;-webkit-align-self:baseline !important;align-self:baseline !important}
 .align-self-lg-stretch{-ms-flex-item-align:stretch !important;-webkit-align-self:stretch !important;-ms-grid-row-align:stretch !important;align-self:stretch !important}
 }@media screen and (min-width:992px){#masthead .main-text,#masthead .prayer-times{text-align:right}
+#masthead .prayer-times{margin-top:0}
+#blog-preview .post:last-of-type{text-align:right}
 }@media(min-width:1024px){.wp-caption .wp-caption-text,.gallery-caption{font:300 2rem/3.1rem sans-serif}
 }@media(min-width:1200px){.container{max-width:1140px}
 .col-xl{-ms-flex-preferred-size:0;-webkit-flex-basis:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;-webkit-flex-grow:1;flex-grow:1;max-width:100%}
@@ -644,9 +652,10 @@ footer #copyright a{color:#b87963}
 .align-self-xl-stretch{-ms-flex-item-align:stretch !important;-webkit-align-self:stretch !important;-ms-grid-row-align:stretch !important;align-self:stretch !important}
 }@media screen and (min-width:1200px){#masthead .main-text{height:35vh}
 }@media(min-width:1280px){.wp-caption .wp-caption-text,.gallery-caption{font:300 2rem/3.1rem sans-serif}
-}@media screen and (max-width:768px){#testimonials-preview .big-q{font-size:36px}
-#testimonials-preview .author{font-size:1.2rem}
-#testimonials-preview .testimonial h3{font-size:16px}
+}@media screen and (max-width:768px){#masthead .main-text{text-align:center}
+#testimonials-preview .big-q{font-size:36px}
+#testimonials-preview .author{font-size:1rem}
+#testimonials-preview .testimonial h3{font-size:18px}
 }@media print{.d-print-none{display:none !important}
 .d-print-inline{display:inline !important}
 .d-print-inline-block{display:inline-block !important}

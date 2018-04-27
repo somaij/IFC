@@ -111,23 +111,29 @@ header {
         }
     }
     .mobile-nav {
-        padding: 1rem;
         position: absolute;
         z-index: 3;
         display: none;
         right: 0;
         text-align: right;
-        width: 200px;
+        
         margin-right: 16px;
-        ul li {
+        #primary-mobile-menu {
+            
+        width: 200px;
+        
+        > li {
             list-style: none;
-            padding: 0.2rem 0;
+            padding: 0.4rem 1rem;
+            &:not(:last-of-type){
+                border-bottom:1px solid rgba(255,255,255,0.2);
+            }
             a {
                 color: #FFF;
             }
 
         }
-
+            }
         font-weight:900;
     }
 }
@@ -242,6 +248,9 @@ header {
                 margin-left: 1rem;
             }
         }
+        @media screen and (max-width:768px){
+            text-align: center;
+        }
 
     }
     .overlay {
@@ -249,13 +258,18 @@ header {
         padding: 1rem 0 2rem;
     }
     h1 {
+        @media screen and (min-width:768px){
         font-size: 64px;
+        }
         color: inherit;
         font-weight: 600;
         margin: 0;
     }
     h2 {
-        font-size: 48px;
+        @media screen and (min-width:768px){
+            font-size: 48px;
+        }
+        font-size:1.5rem;
         color: inherit;
     }
     h3 {
@@ -280,6 +294,12 @@ header {
     .prayer-times {
         @media screen and (min-width: 992px) {
             text-align: right;
+        }
+    }
+    .prayer-times {
+        margin-top:1rem;
+        @media screen and (min-width: 992px) {
+            margin-top:0;
         }
     }
 
@@ -321,15 +341,21 @@ header {
 #blog-preview {
 
     .post {
-        @media screen and (min-width: 500px) {
+        @media screen and (min-width: 768px) {
             height: 210px;
+            margin: 1rem;
         }
         padding: 0.6rem 2rem;
         border-radius: 7px;
-        margin: 1rem;
+        margin-bottom:1rem;
         h3 {
             font-size: 2rem;
 
+        }
+        &:last-of-type{
+            @media screen and (min-width:992px){
+                text-align: right;
+            }
         }
     }
     a {
@@ -340,8 +366,12 @@ header {
 
 .section-header-links {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    @media screen and (min-width:576px){
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    
     font-style: italic;
 
     a {
@@ -412,7 +442,7 @@ header {
     .author {
         font-size: 1.5rem;
         @media screen and (max-width: 768px) {
-                font-size:1.2rem;
+                font-size:1rem;
             }
     }
     padding:1rem 0;
@@ -427,7 +457,7 @@ header {
             font-family: 'Lato', sans-serif;
             font-style: italic;
             @media screen and (max-width: 768px) {
-                font-size:16px;
+                font-size:18px;
             }
         }
     }
