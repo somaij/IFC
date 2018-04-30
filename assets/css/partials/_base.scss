@@ -96,6 +96,24 @@ header {
                 margin-right: 0.6rem;
             }
         }
+        .menu-item-has-children::after{
+            content: '\f0d7';
+            font-family: 'Font Awesome 5 Free';
+        }
+        .sub-menu{
+            position: absolute;
+            background-color:#FFF;
+            text-align: left;
+            padding:0.5rem;
+            z-index: 3;
+            display: none;
+            li{
+                display:block;
+                font-size:14px;
+                margin:0;
+                padding:0.4rem;
+            }
+        }
 
     }
     .menu-toggle {
@@ -135,6 +153,13 @@ header {
         }
             }
         font-weight:900;
+        .sub-menu{
+            display: block !important;
+            li{
+                list-style: none;
+                font-size: 14px;
+            }
+        }
     }
 }
 
