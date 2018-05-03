@@ -163,7 +163,7 @@ header {
     }
 }
 
-/** Site Wide Blocks **/
+/** Site Wide Blocks & Elements **/
 
 .cta {
     padding: 1rem;
@@ -183,7 +183,20 @@ header {
 
     }
 }
-
+.owl-nav button.owl-prev, .owl-nav button.owl-next{
+    position: absolute;
+    top: 35%;
+    font-size: 60px !important;
+    background-color: transparent !important;
+    color:$light-brown !important;
+    top:15%;
+}
+.owl-nav button.owl-prev{
+    left:-2%;
+}
+.owl-nav button.owl-next{
+    right:-2%;
+}
 /** Gradients **/
 
 .light-brown-on-left {

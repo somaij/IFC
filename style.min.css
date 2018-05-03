@@ -232,6 +232,9 @@ header .mobile-nav .sub-menu li{list-style:none;font-size:14px}
 .cta{padding:1rem}
 .cta p{font-size:1.1rem}
 .cta a.btn{background-color:#FFF;color:#444;padding:.4rem 1.2rem;border-radius:7px;text-align:left;display:block;font-weight:bold;min-width:150px;text-align:center}
+.owl-nav button.owl-prev,.owl-nav button.owl-next{position:absolute;top:35%;font-size:60px !important;background-color:transparent !important;color:#b87963 !important;top:15%}
+.owl-nav button.owl-prev{left:-2%}
+.owl-nav button.owl-next{right:-2%}
 .light-brown-on-left{color:#FFF;background:#b87a63;background:-webkit-gradient(left bottom,right top,color-stop(0,#b87a63),color-stop(100%,#cd9d80));background:-webkit-linear-gradient(45deg,#b87a63 0,#cd9d80 100%);background:linear-gradient(45deg,#b87a63 0,#cd9d80 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b87a63',endColorstr='#cd9d80',GradientType=1)}
 .light-brown-on-left a.btn{color:#b87963}
 .dark-brown-on-left,header .menu-toggle.open{color:#FFF;background:#301f16;background:-webkit-gradient(left bottom,right top,color-stop(0,#301f16),color-stop(100%,#5a3a29));background:-webkit-linear-gradient(45deg,#301f16 0,#5a3a29 100%);background:linear-gradient(45deg,#301f16 0,#5a3a29 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#301f16',endColorstr='#5a3a29',GradientType=1)}

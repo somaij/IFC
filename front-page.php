@@ -9,10 +9,10 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col main-text">
-                    <h2>From Our Family to Yours</h2>
-                    <h1>Welcome Home</h1>
-                    <a href="#" class="btn blue">Donate Now</a>
-                    <a href="#" class="btn light-brown">Find Out More</a>
+                <?php the_field( 'masthead_header' ); ?>
+                    
+                    <a href="/donate" class="btn blue">Donate Now</a>
+                    <a href="/about-islamic-forum" class="btn light-brown">Find Out More</a>
                 </div>
             </div>
         </div>
@@ -25,10 +25,9 @@ get_header();
                 </div>
                 <div class="row flex-row-reverse flex-md-row">
                     <div class="col-12 col-md-6">
-                        <h3>Our Beliefs and Values</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                        <?php the_field( 'masthead_body' ); ?>
                         <br>
-                        <a href="#" class="btn light-brown">Read More</a>
+                        <a href="/islam" class="btn light-brown">Read More</a>
                     </div>
                     <div class="col-12 col-md-6 prayer-times">
                         <h3>Prayer Times</h3>
@@ -61,12 +60,12 @@ get_header();
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h2 class="section-header">Events</h2>
+                        <h2 class="section-header"><?php the_field( 'events_header' ); ?></h2>
                     </div>
                     <div class="col-12 col-sm-6 section-header-links">
-                        <a href="#">View Calendar </a>
+                        <a href="<?php the_field( 'calendar_link' ); ?>"><?php the_field( 'calendar_link_text' ); ?> </a>
                         <span class="divider">|</span>
-                        <a href="#"> See Event List</a>
+                        <a href="<?php the_field( 'all_events_link' ); ?>"> <?php the_field( 'all_events_text' ); ?></a>
                     </div>
                 </div>
                 <div class="row">
@@ -127,10 +126,10 @@ get_header();
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h2 class="section-header">Blog</h2>
+                        <h2 class="section-header"><?php the_field( 'blogs_header' ); ?></h2>
                     </div>
                     <div class="col-12 col-sm-6 section-header-links">
-                        <a href="#">See All Blogs</a>
+                        <a href="<?php the_field( 'all_blogs_link' ); ?>"><?php the_field( 'all_blogs_text' ); ?></a>
                     </div>
                 </div>
                 <div class="row justify-content-between">
@@ -163,10 +162,10 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 class="section-header">Gallery</h2>
+                    <h2 class="section-header"><?php the_field( 'gallery_header' ); ?></h2>
                 </div>
                 <div class="col-12 col-sm-6 section-header-links">
-                    <a href="#">View Gallery</a>
+                    <a href="<?php the_field( 'gallery_all_link' ); ?>"><?php the_field( 'gallery_all_text' ); ?></a>
                 </div>
             </div>
             <div class="row">
@@ -180,10 +179,10 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 class="section-header">In the Community</h2>
+                    <h2 class="section-header"><?php the_field( 'testimonials_header' ); ?></h2>
                 </div>
                 <div class="col-12 col-sm-3 section-header-links">
-                    <a href="#">View Testimonials</a>
+                    <a href="<?php the_field( 'testimonials_all_link' ); ?>"><?php the_field( 'testimonials_all_text' ); ?></a>
                 </div>
             </div>
             <div class="row">
