@@ -4,7 +4,11 @@
 if( have_rows('page_content') ):
 
      // loop through the rows of data
-    while ( have_rows('cta') ) : the_row();?>
+    while ( have_rows('page_content') ) : the_row();
+
+    if( get_row_layout() == 'cta' ):
+
+    ?>
 
     <section class="cta <?php the_sub_field('cta_colour'); ?>">
         <div class="container">
@@ -17,7 +21,8 @@ if( have_rows('page_content') ):
         </div>
 
 
-    <?php endwhile;
+    <?php endif;
+    endwhile;
 
 else :
 
