@@ -23,7 +23,7 @@ if( have_rows('page_content') ):
     </section>
     <?php 
     elseif( get_row_layout() == 'text_block' ): ?>
-    <section class="text-section">
+    <section class="text-section <?php the_sub_field('background_colour'); ?>">
         <div class="container">
         <div class="row">
                 <div class="col">
