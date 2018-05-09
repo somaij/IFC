@@ -40,14 +40,14 @@ if( have_rows('page_content') ):
     <?php 
     elseif( get_row_layout() == 'text_block_image' ): ?>
     <section class="text-image-section">
-        <div class="container-fluid">
+        <div class="container-fluid <?php the_sub_field('background_colour'); ?>">
             <div class="row d-flex <?php the_sub_field('image_position'); $ip=get_sub_field('image_position'); if ($ip == 'Right') {
                 echo ' flex-md-row-reverse';
             }?>">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6" style="padding:0;">
                 <img src="<?php the_sub_field('image');?>"/>
                 </div>
-                <div class="col-12 col-md-6 <?php the_sub_field('background_colour'); ?>">
+                <div class="col-12 col-md-6">
                 <h2><?php the_sub_field('header');?></h2>
                 <?php the_sub_field('body');?>
                 </div>
