@@ -47,7 +47,7 @@ if( have_rows('page_content') ):
                 <div class="col-12 col-md-6" style="padding:0;">
                 <img src="<?php the_sub_field('image');?>"/>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 text">
                 <h2><?php the_sub_field('header');?></h2>
                 <?php the_sub_field('body');?>
                 </div>
@@ -59,11 +59,16 @@ if( have_rows('page_content') ):
     endif;
     endwhile;
 
-else :
-
-    the_content();
-    // no layouts found
-
+else :?>
+<div class="container">
+        <div class="row">
+                <div class="col">
+<?php    the_content();
+    // no layouts found ?>
+            </div>
+    </div>
+</div>
+<?php
 endif;
 
 ?>
