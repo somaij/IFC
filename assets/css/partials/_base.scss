@@ -112,7 +112,20 @@ header {
                 padding:0.4rem;
             }
         }
-
+        .donate.menu-item{
+            border:2px solid $light_brown;
+            padding: 0.2rem 0.6rem;
+            border-radius:7px;
+            a{
+                color: $light-brown;
+            }
+            &:hover{
+                background-color:$light-brown;
+                a{
+                    color: #FFF;
+                }
+            }
+        }
     }
     .menu-toggle {
         height: 100%;

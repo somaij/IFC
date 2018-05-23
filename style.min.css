@@ -220,6 +220,10 @@ header nav ul li:not(last-child){margin-right:.6rem}
 header nav .menu-item-has-children::after{content:'\f0d7';font-family:'Font Awesome 5 Free'}
 header nav .sub-menu{position:absolute;background-color:#FFF;text-align:left;padding:.5rem;z-index:3;display:none}
 header nav .sub-menu li{display:block;font-size:14px;margin:0;padding:.4rem}
+header nav .donate.menu-item{border:2px solid #b87963;padding:.2rem .6rem;border-radius:7px}
+header nav .donate.menu-item a{color:#b87963}
+header nav .donate.menu-item:hover{background-color:#b87963}
+header nav .donate.menu-item:hover a{color:#FFF}
 header .menu-toggle{height:100%;color:#b87963;position:absolute;right:0;padding:.8rem 1.2rem}
 header .menu-toggle.open{color:#FFF}
 header .mobile-nav{position:absolute;z-index:3;display:none;right:0;text-align:right;margin-right:16px;font-weight:900}
