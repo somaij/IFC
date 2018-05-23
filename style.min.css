@@ -207,10 +207,12 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 h1,h2,h3,h4,h5,h6{font-family:'Nunito Sans','Lato',sans-serif}
 h1{font-weight:900;font-size:3rem}
 h2{font-weight:700;font-size:2.5rem}
+.text-white{color:#FFF !important}
 .btn{display:inline-block;font-weight:bold;padding:.4rem 1.2rem;border-radius:7px}
 .btn.blue{background:-webkit-linear-gradient(45deg,#12a0bb 0,rgba(18,160,187,0.65) 100%);background:linear-gradient(45deg,#12a0bb 0,rgba(18,160,187,0.65) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#12a0bb',endColorstr='#a612a0bb',GradientType=1);color:#FFF}
 .btn.light-brown{background:-webkit-linear-gradient(45deg,#b87963 0,rgba(184,121,99,0.65) 100%);background:linear-gradient(45deg,#b87963 0,rgba(184,121,99,0.65) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b87963',endColorstr='#a6b87963',GradientType=1);color:#FFF}
 .btn.dark-brown{background:-webkit-linear-gradient(45deg,#452d20 0,rgba(69,45,32,0.65) 100%);background:linear-gradient(45deg,#452d20 0,rgba(69,45,32,0.65) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#452d20',endColorstr='#a6452d20',GradientType=1);color:#FFF}
+.btn.white{background-color:#FFF}
 header{font-family:'Nunito Sans',sans-serif;box-shadow:0 3px 3px rgba(0,0,0,0.2);padding:.6rem 1rem;width:100%;background:#fff;font-size:18px;color:#444;z-index:10}
 header img{max-width:275px}
 header .menu-main-nav-container{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}
@@ -290,6 +292,10 @@ footer address{font-weight:700}
 footer address h6{color:#b87963}
 footer #copyright{background:#CCC;font-weight:700;text-align:center;padding:.7rem;margin-top:2rem}
 footer #copyright a{color:#b87963}
+.page-template-about h2{color:#b87963}
+.about-side{border-right:1px solid #b87963;position:-webkit-sticky;position:sticky}
+.about-side h3{color:#b87963;font-size:1.4rem}
+.about-side .sidebar li{list-style-type:none;font-size:.8rem;font-weight:bold;margin:.5rem 0}
 .owl-carousel{display:none;width:100%;-webkit-tap-highlight-color:transparent;position:relative;z-index:1}
 .owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y;touch-action:manipulation;-moz-backface-visibility:hidden}
 .owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}

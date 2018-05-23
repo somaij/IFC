@@ -23,6 +23,10 @@ h2 {
     font-size: 2.5rem;
 }
 
+.text-white{
+    color:#FFF !important;
+}
+
 /** Buttons **/
 
 .btn {
@@ -62,6 +66,9 @@ h2 {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#452d20', endColorstr='#a6452d20', GradientType=1);
         /* IE6-9 fallback on horizontal gradient */
         color: #FFF;
+    }
+    &.white{
+        background-color:#FFF;
     }
 }
 
@@ -560,6 +567,29 @@ footer {
         margin-top: 2rem;
         a {
             color: $light-brown;
+        }
+    }
+}
+
+/** About Us Styles **/
+.page-template-about{
+    h2{
+        color:$light-brown;
+    }
+}
+.about-side{
+    border-right:1px solid $light-brown;
+    position: sticky;
+    h3{
+        color:$light-brown;
+        font-size:1.4rem;
+    }
+    .sidebar{
+        li{
+            list-style-type: none;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
         }
     }
 }
