@@ -20,19 +20,22 @@ get_header();
 <section class="imam">
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-3 bio">
             <?php if ( get_field( 'imam_image') ) { ?>
 	<img src="<?php the_field( 'imam_image' ); ?>" class="img-round"/>
 <?php } ?>
-<?php the_field( 'imam_name' ); ?>
+<div><?php the_field( 'imam_name' ); ?></div>
             </div>
             <div class="col">
                 <h1><?php the_field( 'imam_section_title' ); ?></h1>
+                <div class="imam-content">
                 <?php the_field( 'imam_section_content' ); ?>
+                    </div>
             </div>
         </div>
     </div>
 </section>
+<section class="about-container">
     <div class="container">
         <div class="row">
             <div class="col-3">
@@ -97,5 +100,13 @@ endif;
             </div>
         </div>
     </div>
+</section>
+    <script>
+        jQuery(function($) {
+            $(document).ready(function() {
+                $('.imam-content').readmore();
+                });
+        });
+    </script>
     <?php
 get_footer();
