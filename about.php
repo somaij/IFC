@@ -20,7 +20,7 @@ get_header();
 <section class="imam">
     <div class="container">
         <div class="row">
-            <div class="col-3 bio">
+            <div class="col-12 col-md-3 bio">
             <?php if ( get_field( 'imam_image') ) { ?>
 	<img src="<?php the_field( 'imam_image' ); ?>" class="img-round"/>
 <?php } ?>
@@ -38,8 +38,9 @@ get_header();
 <section class="about-container">
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="d-none d-md-block col-3">
                 <div class="about-side">
+                    <div class="sidebar__inner">
                     <h3>Table of Contents</h3>
                     <ul class="sidebar">
                         <?php
@@ -64,6 +65,7 @@ endif;
 
 
         ?>
+                </div>
                 </div>
             </div>
             <div class="col">
@@ -105,7 +107,9 @@ endif;
         jQuery(function($) {
             $(document).ready(function() {
                 $('.imam-content').readmore();
-                });
+               
+            $('.about-side').stickySidebar();
+                 });
         });
     </script>
     <?php
