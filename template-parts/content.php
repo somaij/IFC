@@ -17,13 +17,15 @@
 		<article id="post-<?php the_ID(); ?>" class="col">
 				<?php the_content();?>
 		</article>
-		</div>
-		</div>
-		<?php
-		wp_link_pages( array(
+		<?php wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ifc' ),
 			'after'  => '</div>',
 		) );
+		?>
+		</div>
+		</div>
+		<?php
+		
 		else :?>
 
 		<div class="col-12 col-md-6" id="post-<?php the_ID(); ?>" class="archive-result">
