@@ -70,7 +70,20 @@ get_header();
                 </div>
                 <div class="row">
                     <div class="events-carousel owl-carousel owl-theme">
-                        <div class="col event black-on-left">
+                        <?php $events = tribe_get_events( array(
+    'posts_per_page' => 5,
+) );
+ 
+// Loop through the events, displaying the title
+// and content for each
+foreach ( $events as $event ) {
+    echo "<div class='col event black-on-left'>";
+    echo "<h3>$event->post_title</h3>";
+    echo "<p>" . tribe_get_start_date( $event ) . "</p>";
+    echo "<a href='/events/$event->post_name' class='btn blue text-right'>See Event</a>";
+    echo "</div>";
+}?>
+                        <!--<div class="col event black-on-left">
                             <h3>Event 1</h3>
                             <p>123 St.
                                 <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
@@ -117,7 +130,7 @@ get_header();
                             <p>123 St.
                                 <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
                             <a href="#" class="btn blue text-right">See Event</a>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>

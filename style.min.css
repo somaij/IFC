@@ -267,7 +267,7 @@ header .mobile-nav .sub-menu li{list-style:none;font-size:14px}
 #blogsevents{background-size:cover;color:#FFF;background-attachment:fixed;padding:1rem 0}
 #blogsevents h2{color:#FFF;font-weight:900;margin-bottom:1rem}
 #events-preview .event{height:175px;padding:.6rem 1rem;border-radius:7px;font-size:14px;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}
-#events-preview .event h3{font-size:1.6rem}
+#events-preview .event h3{font-size:1.3rem}
 #events-preview .event a{float:right;margin-top:.2rem;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}
 #blog-preview .post{padding:.6rem 2rem;border-radius:7px;margin-bottom:1rem}
 #blog-preview .post h3{font-size:2rem}
