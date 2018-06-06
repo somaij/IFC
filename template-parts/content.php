@@ -9,49 +9,27 @@
 
 ?>
 
-		<?php
+	<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-			echo 'single';
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				ifc_posted_on();
-				ifc_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-
-
-	<?php ifc_post_thumbnail(); ?>
-
-	<div class="entry-content">
+			get_template_part( 'template-parts/page-header');?>
+			<div class="container">
+			<div class="row">
+		<article id="post-<?php the_ID(); ?>" class="col">
+				<?php the_content();?>
+		</article>
+		</div>
+		</div>
 		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ifc' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
-
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ifc' ),
 			'after'  => '</div>',
 		) );
+		else :?>
+
+		<div class="col-12 col-md-6" id="post-<?php the_ID(); ?>" class="archive-result">
+			<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+			<p><?php the_excerpt();?></p>
+			<br><a href="<?php the_permalink();?>" class="btn light-brown">Read More</a>
+		</div>
+		<?php endif;
 		?>
-	</div><!-- .entry-content -->
-</article><!-- #post-<?php the_ID(); ?> -->

@@ -14,10 +14,11 @@
 
 get_header();
 ?>
-
+<div class="container">
+			<div class="row">
 		<?php
-		if ( have_posts() ) :
-
+		if ( have_posts() ) :?>
+		<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -33,10 +34,13 @@ get_header();
 
 			else :
 
-			get_template_part( 'template-parts/content', 'none' );
+			get_template_part( 'template-parts/content', 'none' );?>
 
+			<?php
 		endif;
 		?>
-
+		</div>
+			</div>
+			<br>
 <?php
 get_footer();
