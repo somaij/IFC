@@ -6,7 +6,7 @@
 
 get_header();
 ?>
-<section class="page-header text-white" style="background-image:url(<?php the_post_thumbnail_url();?>">
+<section class="page-header text-white image" style="background-image:url(<?php the_post_thumbnail_url();?>">
     <div class="container">
         <div class="row">
             <div class="col d-flex flex-column align-items-center justify-content-center">

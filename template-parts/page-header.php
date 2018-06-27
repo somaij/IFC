@@ -1,9 +1,21 @@
-<section class="page-header">
+<section class="page-header <?php echo basename( get_page_template() ); ?>">
     <div class="container">
         <div class="row">
             <div class="col d-flex flex-column align-items-center justify-content-center">
-                <h1><?php the_title();?></h1>
-                <?php the_field('header_body');?>
+                <?php 
+                if ( is_archive() ) {
+                    echo "<h1>All ";
+                    echo post_type_archive_title();
+                    echo "</h1>";
+                }
+                else if (is_home()){
+                    echo "<h1>Blog</h1>";
+                }
+                else{
+                    the_title('<h1>', '</h1>');
+                    the_field('header_body');
+                }
+                ?>
             </div>
         </div>
     </div>
