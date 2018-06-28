@@ -76,5 +76,13 @@ get_header(); $s1 = get_field('section_1');?>
             </div>
         </div>
     </section>
+    <section class="text-section">
+        <div class="testimonials-carousel owl-carousel owl-theme">
+            <div class="col testimonials-item dark-brown-on-left">
+                <p>"I can positively say that the IFC has made me into a better person. It has helped me develop a positive attitude towards my studies and discover more about myself."</p>
+                <strong>John Smith, Alumni</strong>
+            </div>
+        </div>
+    </section>
 <?php
 get_footer();
