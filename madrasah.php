@@ -11,7 +11,7 @@ get_header();?>
 // check if the repeater field has rows of data
 if( have_rows('slides') ):?>
         <section class="slides">
-            <div class="owl-carousel">
+            <div class="owl-madrasah owl-carousel owl-theme">
                 <?php 	// loop through the rows of data
     while ( have_rows('slides') ) : the_row();?>
                 <div class="slide" style="background-image:url(<?php the_sub_field('image');?>)">
@@ -120,11 +120,42 @@ if( have_rows('slides') ):?>
         </section>
         <section class="text-section">
             <div class="testimonials-carousel owl-carousel owl-theme">
-                <div class="col testimonials-item dark-brown-on-left">
+                <div class="col testimonial-item dark-brown-on-left">
                     <p>"I can positively say that the IFC has made me into a better person. It has helped me develop a positive attitude towards my studies and discover more about myself."</p>
                     <strong>John Smith, Alumni</strong>
                 </div>
             </div>
         </section>
+    <script>
+        jQuery(function($) {
+            $(document).ready(function() {
+                $(".owl-madrasah").owlCarousel({
+                    loop: true,
+                    nav: true,
+                    autoplay: true,
+                    items:1
+                });
+                $(".testimonials-carousel").owlCarousel({
+                    loop: true,
+                    nav: true,
+                    margin: 15,
+                    stagePadding: 15,
+                    autoplay: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 2
+                        },
+                        1000: {
+                            items: 4
+                        }
+                    }
+                });
+            });
+        });
+
+    </script>
         <?php
 get_footer();
