@@ -9,20 +9,35 @@ get_header();?>
     <?php
 
 // check if the repeater field has rows of data
-if( have_rows('slides') ):?>
+if( have_rows('slides') ):
+    $titles = array();
+    while ( have_rows('slides') ) : the_row();
+        $titles[] = get_sub_field('title');
+    endwhile;
+    ?>
+
         <section class="slides">
             <div class="owl-madrasah owl-carousel owl-theme">
-                <?php 	// loop through the rows of data
+                <?php 
     while ( have_rows('slides') ) : the_row();?>
                 <div class="slide" style="background-image:url(<?php the_sub_field('image');?>)">
                     <div class="content">
                         <h1><?php the_sub_field('title'); ?></h1>
-                        <?php the_sub_field('text'); ?>
+                        <?php the_sub_field('text'); 
+                        ?>
+
                 </div></div>
                 <?php    endwhile;?>
             </div>
+            <?php         echo "<div id='custom-dots'><ul id='dots' class='owl-dots'>";
+        foreach($titles as $value){
+            echo "<li class='owl-dot'>".$value."</li>";
+           }
+        echo "</ul></div>";
+        ?>
         </section>
-        <?php endif;
+        <?php 
+    endif;
 
 ?>
 
@@ -131,10 +146,14 @@ if( have_rows('slides') ):?>
             $(document).ready(function() {
                 $(".owl-madrasah").owlCarousel({
                     loop: true,
-                    nav: true,
-                    autoplay: true,
+                    nav: false,
+                    dotsContainer: '#dots',
+                    autoplay: false,
                     items:1
                 });
+                $('.owl-dot').click(function () {
+                    $(".owl-madrasah").trigger('to.owl.carousel', [$(this).index(), 300]);
+});
                 $(".testimonials-carousel").owlCarousel({
                     loop: true,
                     nav: true,

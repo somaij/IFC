@@ -671,9 +671,41 @@ footer {
             h1{
                 font-size:2rem;
             }
+            @media screen and (max-width:786px){
+                width:100%;
+            }
+        }
+        @media screen and (max-width:786px){
+            height:120vh;
         }
     }
 
+}
+#custom-dots{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    color:#FFF;
+    z-index:50;
+    text-align: right;
+    li{
+    font-weight: bold;
+    padding: 0.4rem 1.2rem;
+    border-radius: 7px;
+    list-style-type: none;
+    cursor: pointer;
+    &.active{
+        @extend .light-brown-on-left;
+    }
+    }
+    @media screen and (max-width:786px){
+        position: relative;
+        background-color:#000;
+        right:0;
+        bottom:0;
+        padding:1rem;
+        top:-1rem;
+    }
 }
 
 .page-template-madrasah {
@@ -713,4 +745,5 @@ footer {
         }
 
     }
+
 }
