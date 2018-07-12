@@ -47,7 +47,8 @@ if ( ! function_exists( 'ifc_setup' ) ) :
 			'menu-1' => esc_html__( 'Primary', 'ifc' ),
             'footer-1' => esc_html__( 'Footer-1', 'ifc' ),
             'footer-2' => esc_html__( 'Footer-2', 'ifc' ),
-            'footer-3' => esc_html__( 'Footer-3', 'ifc' ),
+			'footer-3' => esc_html__( 'Footer-3', 'ifc' ),
+			'madrasah' => esc_html__( 'Madrasah Sub Navigation', 'ifc' )
 		) );
 
 		/*

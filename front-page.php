@@ -9,8 +9,8 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col main-text">
-                <?php the_field( 'masthead_header' ); ?>
-                    
+                    <?php the_field( 'masthead_header' ); ?>
+
                     <a href="/donate" class="btn blue">Donate Now</a>
                     <a href="/about-islamic-forum" class="btn light-brown">Find Out More</a>
                 </div>
@@ -49,7 +49,8 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col d-flex flex-column flex-lg-row align-items-center justify-content-around">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                        rem aperiam</p>
                     <a href="#" class="btn">Learn More</a>
                 </div>
             </div>
@@ -60,12 +61,17 @@ get_header();
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h2 class="section-header"><?php the_field( 'events_header' ); ?></h2>
+                        <h2 class="section-header">
+                            <?php the_field( 'events_header' ); ?>
+                        </h2>
                     </div>
                     <div class="col-12 col-sm-6 section-header-links">
-                        <a href="<?php the_field( 'calendar_link' ); ?>"><?php the_field( 'calendar_link_text' ); ?> </a>
+                        <a href="<?php the_field( 'calendar_link' ); ?>">
+                            <?php the_field( 'calendar_link_text' ); ?> </a>
                         <span class="divider">|</span>
-                        <a href="<?php the_field( 'all_events_link' ); ?>"> <?php the_field( 'all_events_text' ); ?></a>
+                        <a href="<?php the_field( 'all_events_link' ); ?>">
+                            <?php the_field( 'all_events_text' ); ?>
+                        </a>
                     </div>
                 </div>
                 <div class="row">
@@ -83,54 +89,6 @@ foreach ( $events as $event ) {
     echo "<a href='/events/$event->post_name' class='btn blue text-right'>See Event</a>";
     echo "</div>";
 }?>
-                        <!--<div class="col event black-on-left">
-                            <h3>Event 1</h3>
-                            <p>123 St.
-                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
-                            <a href="#" class="btn blue text-right">See Event</a>
-                        </div>
-                        <div class="col event black-on-left">
-                            <h3>Event 2</h3>
-                            <p>123 St.
-                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
-                            <a href="#" class="btn blue text-right">See Event</a>
-                        </div>
-                        <div class="col event black-on-left">
-                            <h3>Event 3</h3>
-                            <p>123 St.
-                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
-                            <a href="#" class="btn blue text-right">See Event</a>
-                        </div>
-                        <div class="col event black-on-left">
-                            <h3>Event 4</h3>
-                            <p>123 St.
-                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
-                            <a href="#" class="btn blue text-right">See Event</a>
-                        </div>
-                        <div class="col event black-on-left">
-                            <h3>Event 5</h3>
-                            <p>123 St.
-                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
-                            <a href="#" class="btn blue text-right">See Event</a>
-                        </div>
-                        <div class="col event black-on-left">
-                            <h3>Event 6</h3>
-                            <p>123 St.
-                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
-                            <a href="#" class="btn blue text-right">See Event</a>
-                        </div>
-                        <div class="col event black-on-left">
-                            <h3>Event 7</h3>
-                            <p>123 St.
-                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
-                            <a href="#" class="btn blue text-right">See Event</a>
-                        </div>
-                        <div class="col event black-on-left">
-                            <h3>Event 8</h3>
-                            <p>123 St.
-                                <br>July 24th, 2017. 9:00 am to 12:00 pm</p>
-                            <a href="#" class="btn blue text-right">See Event</a>
-                        </div>-->
                     </div>
                 </div>
             </div>
@@ -139,21 +97,29 @@ foreach ( $events as $event ) {
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h2 class="section-header"><?php the_field( 'blogs_header' ); ?></h2>
+                        <h2 class="section-header">
+                            <?php the_field( 'blogs_header' ); ?>
+                        </h2>
                     </div>
                     <div class="col-12 col-sm-6 section-header-links">
-                        <a href="<?php the_field( 'all_blogs_link' ); ?>"><?php the_field( 'all_blogs_text' ); ?></a>
+                        <a href="<?php the_field( 'all_blogs_link' ); ?>">
+                            <?php the_field( 'all_blogs_text' ); ?>
+                        </a>
                     </div>
                 </div>
                 <div class="row justify-content-between">
                     <div class="col-12 col-lg post black-on-left">
                         <h3>Test</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                            dicta sunt explicabo.</p>
                         <a href="#">Read More</a>
                     </div>
                     <div class="col-12 col-lg post black-on-left">
                         <h3>Test</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                            dicta sunt explicabo.</p>
                         <a href="#">Read More</a>
                     </div>
                 </div>
@@ -165,7 +131,8 @@ foreach ( $events as $event ) {
         <div class="container">
             <div class="row">
                 <div class="col d-flex flex-column flex-lg-row align-items-center justify-content-around">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                        rem aperiam</p>
                     <a href="#" class="btn">Learn More</a>
                 </div>
             </div>
@@ -175,10 +142,14 @@ foreach ( $events as $event ) {
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 class="section-header"><?php the_field( 'gallery_header' ); ?></h2>
+                    <h2 class="section-header">
+                        <?php the_field( 'gallery_header' ); ?>
+                    </h2>
                 </div>
                 <div class="col-12 col-sm-6 section-header-links">
-                    <a href="<?php the_field( 'gallery_all_link' ); ?>"><?php the_field( 'gallery_all_text' ); ?></a>
+                    <a href="<?php the_field( 'gallery_all_link' ); ?>">
+                        <?php the_field( 'gallery_all_text' ); ?>
+                    </a>
                 </div>
             </div>
             <div class="row">
@@ -192,23 +163,27 @@ foreach ( $events as $event ) {
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 class="section-header"><?php the_field( 'testimonials_header' ); ?></h2>
+                    <h2 class="section-header">
+                        <?php the_field( 'testimonials_header' ); ?>
+                    </h2>
                 </div>
                 <div class="col-12 col-sm-3 section-header-links">
-                    <a href="<?php the_field( 'testimonials_all_link' ); ?>"><?php the_field( 'testimonials_all_text' ); ?></a>
+                    <a href="<?php the_field( 'testimonials_all_link' ); ?>">
+                        <?php the_field( 'testimonials_all_text' ); ?>
+                    </a>
                 </div>
             </div>
             <div class="row">
                 <div class="testimonials-carousel owl-carousel owl-theme">
                     <?php 
-                $args = array( 'post_type' => 'testimonials', 'posts_per_page' => 10 );
+                $args = array( 'post_type' => 'testimonials', 'posts_per_page' => 5 );
 $loop = new WP_Query( $args );
 while ( $loop->have_posts() ) : $loop->the_post();
   echo '<div class="col"><div class="row testimonial"><div class="col-1 big-q">"</div><div class="col">';
   echo '<h3>'; the_field( 'quote_text' ); echo '</h3>';
   echo '<p class="footer"><em class="author">— '; the_field( 'testimonial_author' ); echo '</em><a href="#" class="text-right">Read More</a></p></div>';
                     
-  echo '</div>';
+  echo '</div></div>';
 endwhile;
                 ?>
                 </div>
@@ -216,8 +191,8 @@ endwhile;
         </div>
     </section>
     <script>
-        jQuery(function($) {
-            $(document).ready(function() {
+        jQuery(function ($) {
+            $(document).ready(function () {
                 $(".events-carousel").owlCarousel({
                     loop: true,
                     nav: true,
@@ -244,7 +219,6 @@ endwhile;
                 });
             });
         });
-
     </script>
     <?php
 get_footer();

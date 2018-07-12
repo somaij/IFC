@@ -141,7 +141,6 @@ header {
         right: 0;
         padding: 0.8rem 1.2rem;
         &.open {
-
             @extend .dark-brown-on-left;
             color: #FFF;
         }
@@ -152,13 +151,10 @@ header {
         display: none;
         right: 0;
         text-align: right;
-
         margin-right: 16px;
         #primary-mobile-menu {
-
             width: 200px;
-
-            > li {
+            >li {
                 list-style: none;
                 padding: 0.4rem 1rem;
                 &:not(:last-of-type) {
@@ -167,7 +163,6 @@ header {
                 a {
                     color: #FFF;
                 }
-
             }
         }
         font-weight:900;
@@ -209,7 +204,6 @@ header {
         font-weight: bold;
         min-width: 150px;
         text-align: center;
-
     }
 }
 
@@ -235,6 +229,12 @@ header {
     right: -2%;
 }
 
+.owl-carousel .owl-stage,
+.owl-carousel.owl-drag .owl-item {
+    -ms-touch-action: auto;
+    touch-action: auto;
+}
+
 .text-section {
     padding: 2rem 0;
 }
@@ -248,6 +248,8 @@ header {
     }
     img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
@@ -255,7 +257,6 @@ header {
 
 .light-brown-on-left {
     color: #FFF !important;
-
     background: rgba(184, 122, 99, 1);
     background: -moz-linear-gradient(45deg, rgba(184, 122, 99, 1) 0%, rgba(205, 157, 128, 1) 100%);
     background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(184, 122, 99, 1)), color-stop(100%, rgba(205, 157, 128, 1)));
@@ -267,7 +268,6 @@ header {
     a.btn {
         color: $light-brown;
     }
-
 }
 
 .dark-brown-on-left {
@@ -280,7 +280,6 @@ header {
     background: -ms-linear-gradient(45deg, rgba(48, 31, 22, 1) 0%, rgba(90, 58, 41, 1) 100%);
     background: linear-gradient(45deg, rgba(48, 31, 22, 1) 0%, rgba(90, 58, 41, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#301f16', endColorstr='#5a3a29', GradientType=1);
-
 }
 
 .blue-on-left {
@@ -293,7 +292,6 @@ header {
     background: -ms-linear-gradient(45deg, rgba(13, 130, 166, 1) 0%, rgba(23, 189, 207, 1) 100%);
     background: linear-gradient(45deg, rgba(13, 130, 166, 1) 0%, rgba(23, 189, 207, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d82a6', endColorstr='#17bdcf', GradientType=1);
-
 }
 
 .black-on-left {
@@ -306,7 +304,6 @@ header {
     background: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1);
     color: #FFF !important;
-
 }
 
 .black-on-right {
@@ -319,7 +316,6 @@ header {
     background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1);
     color: #FFF !important;
-
 }
 
 /** Homepage Styles **/
@@ -343,7 +339,6 @@ header {
         @media screen and (max-width:768px) {
             text-align: center;
         }
-
     }
     .overlay {
         background-color: rgba(48, 31, 22, 0.5);
@@ -394,7 +389,6 @@ header {
             margin-top:0;
         }
     }
-
 }
 
 #blogsevents {
@@ -420,7 +414,6 @@ header {
         justify-content: space-around;
         h3 {
             font-size: 1.3rem;
-
         }
         a {
             float: right;
@@ -431,7 +424,6 @@ header {
 }
 
 #blog-preview {
-
     .post {
         @media screen and (min-width: 768px) {
             height: 210px;
@@ -442,7 +434,6 @@ header {
         margin-bottom:1rem;
         h3 {
             font-size: 2rem;
-
         }
         &:last-of-type {
             @media screen and (min-width: 992px) {
@@ -462,10 +453,7 @@ header {
         justify-content: flex-end;
         align-items: center;
     }
-
-
     font-style: italic;
-
     a {
         color: #FFF;
         font-weight: bold;
@@ -498,7 +486,6 @@ header {
         margin: 0 auto;
         content: ' ';
         top: 0;
-
     }
     .section-header-links a {
         color: #444;
@@ -529,7 +516,6 @@ header {
         @media screen and (max-width: 768px) {
             font-size:36px;
         }
-
     }
     .author {
         font-size: 1.5rem;
@@ -571,7 +557,6 @@ footer {
         list-style: none;
         font-size: 1.4rem;
         padding: 0.2rem 0;
-
     }
     address {
         h6 {
@@ -624,9 +609,7 @@ footer {
 }
 
 .about-side {
-
     will-change: min-height;
-
     h3 {
         color: $light-brown;
         font-size: 1.4rem;
@@ -645,7 +628,6 @@ footer {
     }
 }
 
-
 .sidebar__inner {
     transform: translate(0, 0);
     /* For browsers don't support translate3d. */
@@ -654,6 +636,22 @@ footer {
 }
 
 /* Madrasah Styles */
+
+.sub-nav {
+    background-color: $dark-brown;
+    ul {
+        text-align: right;
+        margin-right:5rem;
+        li {
+            display: inline-block;
+            padding: 0.5rem;
+            a {
+                font-weight: 700;
+                color: #FFF;
+            }
+        }
+    }
+}
 
 .owl-madrasah {
     margin: 0;
@@ -667,51 +665,67 @@ footer {
             float: right;
             width: 600px;
             height: 100%;
-            padding:2rem;
-            h1{
-                font-size:2rem;
+            padding: 2rem;
+            h1 {
+                font-size: 2rem;
             }
-            @media screen and (max-width:786px){
-                width:100%;
+            @media screen and (max-width:786px) {
+                width: 100%;
             }
         }
-        @media screen and (max-width:786px){
-            height:120vh;
+        @media screen and (max-width:786px) {
+            height: 120vh;
         }
     }
-
 }
-#custom-dots{
+
+#custom-dots {
     position: absolute;
     right: 30px;
     bottom: 30px;
-    color:#FFF;
-    z-index:50;
+    color: #FFF;
+    z-index: 50;
     text-align: right;
-    li{
-    font-weight: bold;
-    padding: 0.4rem 1.2rem;
-    border-radius: 7px;
-    list-style-type: none;
-    cursor: pointer;
-    &.active{
-        @extend .light-brown-on-left;
+    li {
+        font-weight: bold;
+        padding: 0.4rem 1.2rem;
+        border-radius: 7px;
+        list-style-type: none;
+        cursor: pointer;
+        &.active {
+            @extend .light-brown-on-left;
+        }
     }
-    }
-    @media screen and (max-width:786px){
+    @media screen and (max-width:786px) {
         position: relative;
-        background-color:#000;
-        right:0;
-        bottom:0;
-        padding:1rem;
-        top:-1rem;
+        background-color: #000;
+        right: 0;
+        bottom: 0;
+        padding: 1rem;
+        top: -1rem;
     }
 }
 
 .page-template-madrasah {
+    @media screen and (min-width:768px){
+        .madrasah-link:after {
+            content: '';
+            width: 0;
+            height: 0;
+            display: block;
+            margin: 8px 20px;
+            border-bottom: solid 17px #452d20;
+            border-left: solid 20px transparent;
+            border-right: solid 20px transparent;
+            position: absolute;
+        }
+    }
+
+    h2 {
+        font-weight: 900;
+    }
     p {
         font-size: 1.3rem;
-
     }
     .text-image-section .btn {
         margin-top: 1rem;
@@ -725,6 +739,12 @@ footer {
     }
 }
 
+#testimonials-students-preview {
+    .section-header-links a {
+        color: $light_brown;
+    }
+}
+
 .testimonials-carousel {
     .testimonial-item {
         height: 175px;
@@ -734,16 +754,13 @@ footer {
         display: inline-flex;
         flex-direction: column;
         justify-content: space-around;
-        h3 {
-            font-size: 1.3rem;
-
+        p {
+            font-size: 1rem;
         }
         a {
             float: right;
             margin-top: 0.2rem;
             align-self: flex-end;
         }
-
     }
-
 }

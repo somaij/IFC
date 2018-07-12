@@ -15,18 +15,28 @@ if( have_rows('slides') ):
         $titles[] = get_sub_field('title');
     endwhile;
     ?>
-
+<div class="sub-nav">
+<?php
+					wp_nav_menu( array(
+						'theme_location' => 'madrasah',
+						'menu_id'        => 'madrasah-nav',
+					) );
+                    ?>
+</div>
         <section class="slides">
             <div class="owl-madrasah owl-carousel owl-theme">
                 <?php 
     while ( have_rows('slides') ) : the_row();?>
                 <div class="slide" style="background-image:url(<?php the_sub_field('image');?>)">
                     <div class="content">
-                        <h1><?php the_sub_field('title'); ?></h1>
+                        <h1>
+                            <?php the_sub_field('title'); ?>
+                        </h1>
                         <?php the_sub_field('text'); 
                         ?>
 
-                </div></div>
+                    </div>
+                </div>
                 <?php    endwhile;?>
             </div>
             <?php         echo "<div id='custom-dots'><ul id='dots' class='owl-dots'>";
@@ -121,7 +131,9 @@ if( have_rows('slides') ):
                 <br/>
                 <div class="row">
                     <div class="col-md-10">
-                        <strong><?php echo $h['cta_text'];?></strong>
+                        <strong>
+                            <?php echo $h['cta_text'];?>
+                        </strong>
                     </div>
                     <div class="col d-flex align-items-center">
                         <p>
@@ -133,48 +145,72 @@ if( have_rows('slides') ):
                 </div>
             </div>
         </section>
-        <section class="text-section">
-            <div class="testimonials-carousel owl-carousel owl-theme">
-                <div class="col testimonial-item dark-brown-on-left">
-                    <p>"I can positively say that the IFC has made me into a better person. It has helped me develop a positive attitude towards my studies and discover more about myself."</p>
-                    <strong>John Smith, Alumni</strong>
+        <section class="text-section" id="testimonials-students-preview">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2>What Our Students Think</h2>
+                    </div>
+                    <div class="col-12 col-sm-6 section-header-links">
+                        <a href="<?php echo get_site_url(); ?>/testimonials">Read All Testimonials</a>
+                    </div>
+                </div>
+                <div class="testimonials-carousel owl-carousel owl-theme row">
+                <?php 
+                $args = array( 'post_type' => 'testimonials', 'posts_per_page' => 5, 'taxonomy' => 'category',
+                'term' => 'student', );
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <div class="col testimonial-item dark-brown-on-left">
+                        <p>"<?php the_field( 'quote_text' );?>"</p>
+                        <strong>— <?php the_field( 'testimonial_author' );?></strong>
+                    </div>
+                    <?php endwhile;?>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <br>
+                        <a href="<?php echo get_site_url(); ?>/testimonials" class="btn light-brown-on-left">Read All</a>
+                    </div>
                 </div>
             </div>
         </section>
-    <script>
-        jQuery(function($) {
-            $(document).ready(function() {
-                $(".owl-madrasah").owlCarousel({
-                    loop: true,
-                    nav: false,
-                    dotsContainer: '#dots',
-                    autoplay: false,
-                    items:1
-                });
-                $('.owl-dot').click(function () {
-                    $(".owl-madrasah").trigger('to.owl.carousel', [$(this).index(), 300]);
-});
-                $(".testimonials-carousel").owlCarousel({
-                    loop: true,
-                    nav: true,
-                    margin: 15,
-                    stagePadding: 15,
-                    autoplay: true,
-                    responsive: {
-                        0: {
-                            items: 1
-                        },
-                        600: {
-                            items: 2
-                        },
-                        1000: {
-                            items: 4
+        <script>
+            jQuery(function ($) {
+                $(document).ready(function () {
+                    $(".owl-madrasah").owlCarousel({
+                        loop: true,
+                        nav: false,
+                        dotsContainer: '#dots',
+                        autoplay: true,
+                        autoplaySpeed: 500,
+                        items: 1,
+                        animateOut: 'fadeOut',
+                        autoplayHoverPause:true
+                    });
+                    $('.owl-dot').click(function () {
+                        $(".owl-madrasah").trigger('to.owl.carousel', [$(this).index(), 300]);
+                    });
+                    $(".testimonials-carousel").owlCarousel({
+                        loop: true,
+                        nav: true,
+                        margin: 15,
+                        stagePadding: 15,
+                        autoplay: true,
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            768: {
+                                items: 2
+                            },
+                            1000: {
+                                items: 3
+                            }
                         }
-                    }
+                    });
                 });
             });
-        });
-
-    </script>
+        </script>
         <?php
 get_footer();

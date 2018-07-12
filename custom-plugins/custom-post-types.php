@@ -56,6 +56,7 @@ function testimonals_post_type() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'taxonomies'  => array( 'category' ),
 	);
 	register_post_type( 'testimonials', $args );
 
