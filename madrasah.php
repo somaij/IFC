@@ -145,6 +145,38 @@ if( have_rows('slides') ):
                 </div>
             </div>
         </section>
+        <?php $gal = get_field('gallery_section');?>
+        <section id="school-gallery-preview" class="text-section" style="background-image:url('<?php echo get_stylesheet_directory_uri();?>/assets/img/school-pattern-2.jpg');">
+        <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2>
+                            <?php echo $gal['title'];?>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <?php echo do_shortcode('[foogallery id="4515"]');?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <?php echo $gal['text'];?>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col text-center">
+                        <p>
+                            <a href="<?php echo $gal['button_link'];?>" class="btn light-brown-on-left">
+                                <?php echo $gal['button_text'];?>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="text-section" id="testimonials-students-preview">
             <div class="container">
                 <div class="row">
@@ -186,7 +218,8 @@ while ( $loop->have_posts() ) : $loop->the_post();?>
                         autoplaySpeed: 500,
                         items: 1,
                         animateOut: 'fadeOut',
-                        autoplayHoverPause:true
+                        autoplayHoverPause:true,
+                        touchDrag:false
                     });
                     $('.owl-dot').click(function () {
                         $(".owl-madrasah").trigger('to.owl.carousel', [$(this).index(), 300]);

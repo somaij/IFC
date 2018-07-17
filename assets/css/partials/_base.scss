@@ -231,8 +231,8 @@ header {
 
 .owl-carousel .owl-stage,
 .owl-carousel.owl-drag .owl-item {
-    -ms-touch-action: auto;
-    touch-action: auto;
+    -ms-touch-action: auto !important;
+    touch-action: auto !important;
 }
 
 .text-section {
@@ -641,7 +641,10 @@ footer {
     background-color: $dark-brown;
     ul {
         text-align: right;
-        margin-right:5rem;
+
+        @media screen and (min-width:768px){
+            margin-right:5rem;
+        }
         li {
             display: inline-block;
             padding: 0.5rem;
@@ -738,7 +741,9 @@ footer {
         text-align: center;
     }
 }
+#school-gallery-preview{
 
+}
 #testimonials-students-preview {
     .section-header-links a {
         color: $light_brown;
