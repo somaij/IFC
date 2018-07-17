@@ -202,7 +202,7 @@ while ( $loop->have_posts() ) : $loop->the_post();?>
                 <div class="row">
                     <div class="col text-center">
                         <br>
-                        <a href="<?php echo get_site_url(); ?>/testimonials" class="btn light-brown-on-left">Read All</a>
+                        <a href="<?php echo get_site_url(); ?>/student-testimonials" class="btn light-brown-on-left">Read All</a>
                     </div>
                 </div>
             </div>
