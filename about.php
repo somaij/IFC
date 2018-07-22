@@ -6,16 +6,17 @@
 
 get_header();
 ?>
-<section class="page-header text-white image" style="background-image:url(<?php the_post_thumbnail_url();?>">
+<section class="page-header <?php echo basename( get_page_template() ); ?> <?php if (has_post_thumbnail()): echo'image'; endif;?>"  <?php if (has_post_thumbnail()):?> style="background-image:url(<?php the_post_thumbnail_url();?>" <?php endif;?> >
     <div class="container">
         <div class="row">
             <div class="col d-flex flex-column align-items-center justify-content-center">
                 <h1><?php the_field( 'page_header' ); ?></h1>
-                <?php the_field( 'page_header_content' ); ?>
-                <br><a href="<?php the_field( 'page_header_link' ); ?>" class="btn white"><?php the_field( 'page_header_button_text' ); ?></a>
+                <div class="page-header-content"><?php the_field( 'page_header_content' ); ?></div>
+                <a href="<?php the_field( 'page_header_link' ); ?>" class="btn white"><?php the_field( 'page_header_button_text' ); ?></a>
             </div>
         </div>
     </div>
+    <?php if (has_post_thumbnail()): echo'<div class="overlay"></div>'; endif;?>
 </section>
 <section class="imam">
     <div class="container">

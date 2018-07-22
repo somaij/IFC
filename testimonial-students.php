@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<section class="page-header text-white image" style="background-image:url(<?php the_post_thumbnail_url();?>">
+<section class="page-header <?php if (has_post_thumbnail()): echo'image'; endif;?>" style="background-image:url(<?php the_post_thumbnail_url();?>">
     <div class="container">
         <div class="row">
             <div class="col d-flex flex-column align-items-center justify-content-center">
@@ -16,6 +16,7 @@ get_header();
             </div>
         </div>
     </div>
+    <?php if (has_post_thumbnail()): echo'<div class="overlay"></div>'; endif;?>
 </section>
     <div class="container">
         <div class="row">
@@ -24,10 +25,11 @@ get_header();
                 'term' => 'student', );
 $loop = new WP_Query( $args );
 while ( $loop->have_posts() ) : $loop->the_post();?>
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6" class="archive-result">
                 <p>"
-                    <?php the_field( 'quote_text' );?>"</p>
+                    <?php if (get_field('quote_text')): the_field( 'quote_text' ); else: the_excerpt(); endif;?>"</p>
                 <strong>— <?php the_field( 'testimonial_author' );?></strong>
+                <br><a href="<?php the_permalink();?>" class="btn light-brown">Read More</a>
             </div>
             <?php endwhile;?>
         </div>
