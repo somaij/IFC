@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About Us Page
+ * Template Name: Imam Page
  * @package IFC
  */
 
@@ -17,27 +17,7 @@ get_header();
             </div>
         </div>
     </div>
-</section>
-<section class="imam">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-3 bio">
-            <?php if ( get_field( 'imam_image') ) { ?>
-	<img src="<?php the_field( 'imam_image' ); ?>" class="img-round"/>
-<?php } ?>
-<div><?php the_field( 'imam_name' ); ?></div>
-            </div>
-            <div class="col">
-                <h1><?php the_field( 'imam_section_title' ); ?></h1>
-                <div class="imam-content">
-                <?php the_field( 'imam_section_content' ); ?>
-                <a href="<?php the_field('imam_link')?>" class="btn dark-brown-on-left">Read More</a>
-                <a href="<?php the_field('tariqa_link')?>" class="btn blue-on-left">Our Tariqa</a>
-                    </div>
-                   
-            </div>
-        </div>
-    </div>
+    
 </section>
 <section class="about-container">
     <div class="container">
@@ -109,9 +89,7 @@ endif;
 </section>
     <script>
         jQuery(function($) {
-            $(document).ready(function() {
-                //$('.imam-content').readmore();
-               
+            $(document).ready(function() {               
             $('.about-side').stickySidebar();
                  });
         });

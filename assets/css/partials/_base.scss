@@ -27,6 +27,42 @@ h2 {
     color: #FFF !important;
 }
 
+/** Input **/
+
+input,
+textarea {
+    background: #FFF;
+    padding: 0.6rem 1rem;
+    color: #333;
+    width:100%;
+    &:focus{
+        border:none;
+        box-shadow:3px 3px 0px 0px rgba(0, 0, 0, 0.2);
+        outline:none;
+    }
+}
+
+.wpcf7 .element-wrapper{
+    margin:0.5rem 0;
+    position:relative;
+    > label {
+        position: absolute;
+        top: 0.4rem;
+        left: 15px;
+        transition: all .1s ease-in-out;
+        z-index: 1;
+        color:#666;
+        &.move {
+            opacity: .4;
+            font-size: 10px;
+            top: 0;
+            left: 17px;
+        }
+    }
+} 
+
+
+
 /** Buttons **/
 
 .btn {
@@ -184,8 +220,20 @@ header {
     width: 100%;
     height: 100%;
     background-attachment: fixed;
+    position: relative;
     &.image {
         background-size: cover;
+
+    }
+    .overlay{
+        background-color:rgba(0, 0, 0, 0.3);
+        width:100%;
+        height:100%;
+        position: absolute;
+        top:0;
+    }
+    .container{
+        z-index:2;
     }
 }
 
@@ -597,11 +645,6 @@ footer {
         text-align: center;
         font-weight: bold;
     }
-    a {
-        color: #FFF;
-        font-weight: bold;
-        font-style: italic;
-    }
 }
 
 .about-container {
@@ -641,8 +684,7 @@ footer {
     background-color: $dark-brown;
     ul {
         text-align: right;
-
-        @media screen and (min-width:768px){
+        @media screen and (min-width: 768px) {
             margin-right:5rem;
         }
         li {
@@ -710,7 +752,7 @@ footer {
 }
 
 .page-template-madrasah {
-    @media screen and (min-width:768px){
+    @media screen and (min-width: 768px) {
         .madrasah-link:after {
             content: '';
             width: 0;
@@ -723,7 +765,6 @@ footer {
             position: absolute;
         }
     }
-
     h2 {
         font-weight: 900;
     }
@@ -741,9 +782,9 @@ footer {
         text-align: center;
     }
 }
-#school-gallery-preview{
 
-}
+#school-gallery-preview {}
+
 #testimonials-students-preview {
     .section-header-links a {
         color: $light_brown;
