@@ -31,14 +31,7 @@ get_header();
                     </div>
                     <div class="col-12 col-md-6 prayer-times">
                         <h3>Prayer Times</h3>
-                        <ul class="pt">
-                            <li>Today</li>
-                            <li>Fajr - 4 am</li>
-                            <li>Dhur - 1 pm</li>
-                            <li>Asr - 7 pm</li>
-                            <li>Maghrib - 9 pm</li>
-                            <li>Isha - 11 pm</li>
-                        </ul>
+                        <?php get_template_part( 'template-parts/prayer-times');?>
                     </div>
                 </div>
             </div>
