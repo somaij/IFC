@@ -225,7 +225,7 @@ header nav{font-weight:900}
 header nav ul li{display:inline-block}
 header nav ul li:not(last-child){margin-right:.6rem}
 header nav .menu-item-has-children::after{content:'\f0d7';font-family:'Font Awesome 5 Free'}
-header nav .sub-menu{position:absolute;background-color:#FFF;text-align:left;padding:.5rem;z-index:3;display:none}
+header nav .sub-menu{position:absolute;background-color:#FFF;text-align:left;padding:.5rem;z-index:6;display:none}
 header nav .sub-menu li{display:block;font-size:14px;margin:0;padding:.4rem}
 header nav .donate.menu-item{border:2px solid #b87963;padding:.2rem .6rem;border-radius:7px}
 header nav .donate.menu-item a{color:#b87963}
@@ -332,6 +332,10 @@ footer #copyright a{color:#b87963}
 .testimonials-carousel .testimonial-item{height:175px;padding:.6rem 1rem;border-radius:7px;font-size:14px;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}
 .testimonials-carousel .testimonial-item p{font-size:1rem}
 .testimonials-carousel .testimonial-item a{float:right;margin-top:.2rem;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}
+.page-template-prayer-times-php .pt li{list-style-type:none}
+#prayer-times-full{width:100%;min-width:600px;overflow-x:scroll}
+#prayer-times-full th{background-color:#ccc;color:#000;font-weight:bold}
+#prayer-times-full td,#prayer-times-full th{padding:6px;border-bottom:1px solid #FFF;text-align:left}
 .owl-carousel{display:none;width:100%;-webkit-tap-highlight-color:transparent;position:relative;z-index:1}
 .owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y;touch-action:manipulation;-moz-backface-visibility:hidden}
 .owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}

@@ -146,7 +146,7 @@ header {
             background-color: #FFF;
             text-align: left;
             padding: 0.5rem;
-            z-index: 3;
+            z-index: 6;
             display: none;
             li {
                 display: block;
@@ -862,4 +862,29 @@ footer {
             align-self: flex-end;
         }
     }
+}
+.page-template-prayer-times-php{
+    .pt{
+        li{
+            list-style-type: none;
+        }
+    }
+}
+
+#prayer-times-full{
+    width:100%;
+    min-width:600px;
+    overflow-x:scroll;
+    /* Zebra striping */
+  th { 
+    background-color:#ccc;
+    color: #000; 
+    font-weight: bold; 
+  }
+  td, th { 
+    padding: 6px; 
+    border-bottom: 1px solid #FFF; 
+    text-align: left; 
+  }
+
 }
