@@ -37,7 +37,7 @@
 					) );
 					?>
                     </div>
-                    <button class="menu-toggle d-block d-md-none text-right" aria-controls="primary-menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+                    <button class="menu-toggle d-block d-md-none text-right" aria-controls="primary-menu" aria-expanded="false"><i class="fas fa-bars"></i> Menu</button>
 				</nav><!-- #site-navigation -->
                 
             </div>

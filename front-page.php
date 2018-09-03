@@ -11,7 +11,7 @@ get_header();
                 <div class="col main-text">
                     <?php the_field( 'masthead_header' ); ?>
 
-                    <a href="/donate" class="btn blue">Donate Now</a>
+                    <a href="/donate" class="btn blue">Donate Now</a><br class="d-block d-sm-none"><br class="d-block d-sm-none">
                     <a href="/about-islamic-forum" class="btn light-brown">Find Out More</a>
                 </div>
             </div>
@@ -20,7 +20,20 @@ get_header();
             <div class="container">
                 <div class="row">
                     <div class="col text-center">
-                        <h4>Next Upcoming Event:</h4>
+                    <?php $event_up = tribe_get_events( array(
+    'posts_per_page' => 1,
+    'start_date' => date( 'Y-m-d H:i:s' )
+) );
+?>
+                        <h4>Next Upcoming Event:
+                        <?php 
+                        foreach ( $event_up as $first_event ) {
+                        
+                        echo "<a href='/events/$first_event->post_name'>$first_event->post_title</a> ";
+                        echo tribe_get_start_date( $first_event );
+                        }
+                        ?>
+                        </h4>
                     </div>
                 </div>
                 <div class="row flex-row-reverse flex-md-row">
@@ -168,17 +181,14 @@ foreach ( $events as $event ) {
             </div>
             <div class="row">
                 <div class="testimonials-carousel owl-carousel owl-theme">
-                    <?php 
-                $args = array( 'post_type' => 'testimonials', 'posts_per_page' => 5 );
-$loop = new WP_Query( $args );
-while ( $loop->have_posts() ) : $loop->the_post();
-  echo '<div class="col"><div class="row testimonial"><div class="col-1 big-q">"</div><div class="col">';
-  echo '<h3>'; the_field( 'quote_text' ); echo '</h3>';
-  echo '<p class="footer"><em class="author">— '; the_field( 'testimonial_author' ); echo '</em><a href="#" class="text-right">Read More</a></p></div>';
-                    
-  echo '</div></div>';
-endwhile;
-                ?>
+                    <?php $args = array( 'post_type' => 'testimonials', 'posts_per_page' => 5 ); $loop = new WP_Query( $args );
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                        echo '<div class="col"><div class="row testimonial"><div class="col-1 big-q">"</div><div class="col">';
+                        echo '<h3>'; the_field( 'quote_text' ); echo '</h3>';
+                        echo '<p class="footer"><em class="author">— '; the_field( 'testimonial_author' ); echo '</em><a href="#" class="text-right">Read More</a></p></div>';            
+                        echo '</div></div>';
+                    endwhile;
+                    ?>
                 </div>
             </div>
         </div>
