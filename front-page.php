@@ -54,10 +54,25 @@ get_header();
     <section class="cta light-brown-on-left">
         <div class="container">
             <div class="row">
-                <div class="col d-flex flex-column flex-lg-row align-items-center justify-content-around">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                        rem aperiam</p>
-                    <a href="#" class="btn">Learn More</a>
+                <div class="col col-sm-4">
+                <?php the_field( 'cta_1_text' ); ?>
+                <a href="<?php the_field( 'cta_1_button_link' ); ?>" class="btn"><?php the_field( 'cta_1_button_text' ); ?></a>
+                </div>
+                <div class="col col-sm-8">
+                <div class="front-student-testimonials-carousel owl-carousel owl-theme">
+                <?php 
+                $args = array( 'post_type' => 'testimonials', 'posts_per_page' => 3, 'taxonomy' => 'category',
+                'term' => 'student', );
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <div class="col testimonial-item">
+                        <p>"<?php the_field( 'quote_text' );?>"</p>
+                        <strong>— <?php the_field( 'testimonial_author' );?></strong>
+                    </div>
+                    <?php endwhile;
+                    wp_reset_query();?>
+                </div>
+                    
                 </div>
             </div>
         </div>
@@ -94,7 +109,7 @@ foreach ( $events as $event ) {
     echo "<p>" . tribe_get_start_date( $event ) . "</p>";
     echo "<a href='/events/$event->post_name' class='btn blue text-right'>See Event</a>";
     echo "</div>";
-}?>
+} wp_reset_query();?>
                     </div>
                 </div>
             </div>
@@ -137,9 +152,8 @@ foreach ( $events as $event ) {
         <div class="container">
             <div class="row">
                 <div class="col d-flex flex-column flex-lg-row align-items-center justify-content-around">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                        rem aperiam</p>
-                    <a href="#" class="btn">Learn More</a>
+                <?php the_field( 'cta_2_text' ); ?>
+                    <a href="<?php the_field( 'cta_2_button_link' ); ?>" class="btn"><?php the_field( 'cta_2_button_text' ); ?></a>
                 </div>
             </div>
         </div>
@@ -214,6 +228,12 @@ foreach ( $events as $event ) {
                         }
                     }
                 });
+                $(".front-student-testimonials-carousel").owlCarousel({
+                        loop: true,
+                        nav: true,
+                        autoplay: true,
+                        items: 1
+                    });
                 $(".testimonials-carousel").owlCarousel({
                     loop: true,
                     nav: true,
