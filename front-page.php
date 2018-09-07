@@ -13,7 +13,9 @@ $rand = array_rand($images, 1);
                 <div class="col main-text">
                     <?php the_field( 'masthead_header' ); ?>
 
-                    <a href="/donate" class="btn blue">Donate Now</a><br class="d-block d-sm-none"><br class="d-block d-sm-none">
+                    <a href="/donate" class="btn blue">Donate Now</a>
+                    <br class="d-block d-sm-none">
+                    <br class="d-block d-sm-none">
                     <a href="/about-islamic-forum" class="btn light-brown">Find Out More</a>
                 </div>
             </div>
@@ -22,13 +24,14 @@ $rand = array_rand($images, 1);
             <div class="container">
                 <div class="row">
                     <div class="col text-center">
-                    <?php $event_up = tribe_get_events( array(
+                        <?php $event_up = tribe_get_events( array(
     'posts_per_page' => 1,
     'start_date' => date( 'Y-m-d H:i:s' )
 ) );
 ?>
                         <h4>Next Upcoming Event:
-                        <?php 
+                            <br class="d-block d-sm-none">
+                            <?php 
                         foreach ( $event_up as $first_event ) {
                         
                         echo "<a href='/events/$first_event->post_name'>$first_event->post_title</a> ";
@@ -38,10 +41,12 @@ $rand = array_rand($images, 1);
                         </h4>
                     </div>
                 </div>
-                <div class="row flex-row-reverse flex-md-row">
-                    <div class="col-12 col-md-6 d-flex flex-column justify-content-between">
+                <div class="row">
+                    <div class="d-none d-sm-flex col-12 col-md-6 flex-column justify-content-between">
                         <?php the_field( 'masthead_body' ); ?>
-                        <div><a href="/islam" class="btn light-brown">Read More</a></div>
+                        <div>
+                            <a href="/islam" class="btn light-brown">Read More</a>
+                        </div>
                     </div>
                     <div class="col-12 col-md-6 prayer-times">
                         <h3>Prayer Times</h3>
@@ -54,26 +59,33 @@ $rand = array_rand($images, 1);
     </div>
     <section class="cta light-brown-on-left">
         <div class="container">
-            <div class="row">
-                <div class="col col-sm-4">
-                <?php the_field( 'cta_1_text' ); ?>
-                <a href="<?php the_field( 'cta_1_button_link' ); ?>" class="btn"><?php the_field( 'cta_1_button_text' ); ?></a>
+            <div class="row d-flex flex-column-reverse flex-md-row">
+                <div class="col-12 col-md-4 d-flex flex-column align-items-center align-items-md-start">
+                    <?php the_field( 'cta_1_text' ); ?>
+                    <div>
+                        <a href="<?php the_field( 'cta_1_button_link' ); ?>" class="btn">
+                            <?php the_field( 'cta_1_button_text' ); ?>
+                        </a>
+                    </div>
                 </div>
-                <div class="col col-sm-8">
-                <div class="front-student-testimonials-carousel owl-carousel owl-theme">
-                <?php 
+                <div class="col-12 col-md-8 d-none d-sm-block">
+                    <div class="front-student-testimonials-carousel owl-carousel owl-theme">
+                        <?php 
                 $args = array( 'post_type' => 'testimonials', 'posts_per_page' => 3, 'taxonomy' => 'category',
                 'term' => 'student', );
 $loop = new WP_Query( $args );
 while ( $loop->have_posts() ) : $loop->the_post();?>
-                    <div class="col testimonial-item">
-                        <p>"<?php the_field( 'quote_text' );?>"</p>
-                        <strong>— <?php the_field( 'testimonial_author' );?></strong>
-                    </div>
-                    <?php endwhile;
+                        <div class="col testimonial-item">
+                            <p>"
+                                <?php the_field( 'quote_text' );?>"</p>
+                            <strong>—
+                                <?php the_field( 'testimonial_author' );?>
+                            </strong>
+                        </div>
+                        <?php endwhile;
                     wp_reset_query();?>
-                </div>
-                    
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -97,11 +109,20 @@ while ( $loop->have_posts() ) : $loop->the_post();?>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="events-carousel owl-carousel owl-theme">
-                        <?php $events = tribe_get_events( array(
-    'posts_per_page' => 5,
-) );
- 
+                    <div class="d-block d-sm-none">
+                    <?php $events = tribe_get_events( array('posts_per_page' => 3,) );
+// Loop through the events, displaying the title
+// and content for each
+foreach ( $events as $event ) {
+    echo "<div class='col event'>";
+    echo "<h3>$event->post_title</h3>";
+    echo "<p>" . tribe_get_start_date( $event ) . "</p>";
+    echo "<a href='/events/$event->post_name' class='btn blue text-right'>See Event</a>";
+    echo "</div>";
+} wp_reset_query();?>
+                    </div>
+                    <div class="d-none d-sm-block events-carousel owl-carousel owl-theme">
+                        <?php $events = tribe_get_events( array('posts_per_page' => 5,) );
 // Loop through the events, displaying the title
 // and content for each
 foreach ( $events as $event ) {
@@ -130,18 +151,22 @@ foreach ( $events as $event ) {
                     </div>
                 </div>
                 <div class="row justify-content-between">
-                <?php global $post;
+                    <?php global $post;
 $args = array( 'posts_per_page' => 2);
 
 $myposts = get_posts( $args );
 foreach ( $myposts as $post ) : setup_postdata( $post );  ?>
                     <div class="col-12 col-lg post black-on-left">
-                        <h3><?php the_title();?></h3>
-                        <p><?php echo excerpt(25);?></p>
+                        <h3>
+                            <?php the_title();?>
+                        </h3>
+                        <p>
+                            <?php echo excerpt(25);?>
+                        </p>
                         <a href="<?php the_permalink(); ?>">Read More</a>
                     </div>
-                <?php endforeach; 
-wp_reset_postdata()?>    
+                    <?php endforeach; 
+wp_reset_postdata()?>
                 </div>
             </div>
         </section>
@@ -151,8 +176,10 @@ wp_reset_postdata()?>
         <div class="container">
             <div class="row">
                 <div class="col d-flex flex-column flex-lg-row align-items-center justify-content-around">
-                <?php the_field( 'cta_2_text' ); ?>
-                    <a href="<?php the_field( 'cta_2_button_link' ); ?>" class="btn"><?php the_field( 'cta_2_button_text' ); ?></a>
+                    <?php the_field( 'cta_2_text' ); ?>
+                    <a href="<?php the_field( 'cta_2_button_link' ); ?>" class="btn">
+                        <?php the_field( 'cta_2_button_text' ); ?>
+                    </a>
                 </div>
             </div>
         </div>
@@ -208,31 +235,39 @@ wp_reset_postdata()?>
     </section>
     <script>
         jQuery(function ($) {
-            $(document).ready(function () {
-                $(".events-carousel").owlCarousel({
-                    loop: true,
-                    nav: true,
-                    margin: 15,
-                    stagePadding: 15,
-                    autoplay: true,
-                    responsive: {
-                        0: {
-                            items: 1
-                        },
-                        600: {
-                            items: 2
-                        },
-                        1000: {
-                            items: 4
-                        }
-                    }
-                });
-                $(".front-student-testimonials-carousel").owlCarousel({
+            function owlInitialize() {
+                if ($(window).width() > 575) {
+                    $(".events-carousel").owlCarousel({
                         loop: true,
                         nav: true,
+                        margin: 15,
+                        stagePadding: 15,
                         autoplay: true,
-                        items: 1
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            600: {
+                                items: 2
+                            },
+                            1000: {
+                                items: 4
+                            }
+                        }
                     });
+                } else {
+                    $('.events-carousel').owlCarousel('destroy');
+                }
+            }
+            $(document).ready(function () {
+
+                owlInitialize();
+                $(".front-student-testimonials-carousel").owlCarousel({
+                    loop: true,
+                    nav: true,
+                    autoplay: true,
+                    items: 1
+                });
                 $(".testimonials-carousel").owlCarousel({
                     loop: true,
                     nav: true,
@@ -240,6 +275,9 @@ wp_reset_postdata()?>
                     items: 1
                 });
             });
+            $(window).resize(function () {
+                owlInitialize()
+            })
         });
     </script>
     <?php

@@ -535,23 +535,40 @@ header {
 }
 
 #blogsevents {
-    background-size: cover;
-    color: #FFF;
     h2 {
-        color: #FFF;
         font-weight: 900;
         margin-bottom: 1rem;
     }
-    background-attachment: fixed;
-    padding:1rem 0;
+    @media screen and (max-width:575px){
+        background:none !important;
+    }
+    @media screen and (min-width:576px){
+        padding:1rem 0;
+        background-size: cover;
+        color: #FFF;
+        background-attachment: fixed;
+    }
+    
 }
 
 #events-preview {
+    @media screen and (min-width:576px){
+        a{
+            color: #FFF;
+        }
+    }    
     .event {
-        height: 175px;
+        border-bottom:1px solid $light-brown;
         padding: 0.6rem 1rem;
+        @media screen and (min-width:576px){
+            height: 175px;
+        
+        border:none;
         border-radius: 7px;
         font-size: 14px;
+        
+        }
+        
         display: inline-flex;
         flex-direction: column;
         justify-content: space-around;
@@ -567,6 +584,13 @@ header {
 }
 
 #blog-preview {
+    @media screen and (max-width:575px){
+        background-color:#000;
+        color:#FFF;
+        a{
+            color: #FFF;
+        }
+    }
     .post {
         @media screen and (min-width: 768px) {
             height: 210px;
@@ -586,22 +610,30 @@ header {
                 text-align: right;
             }
         }
+        @media screen and (max-width:575px){
+            background:none !important;
+        }
     }
     a {
         color: #FFF;
         font-weight: bold;
     }
 }
-
+.section-header{
+    @media screen and (max-width:575px){
+        text-align:center;
+        margin-bottom:0 !important;
+    }
+}
 .section-header-links {
     display: flex;
+    justify-content: center;
     @media screen and (min-width: 576px) {
         justify-content: flex-end;
         align-items: center;
     }
     font-style: italic;
     a {
-        color: #FFF;
         font-weight: bold;
     }
     .divider {
@@ -650,6 +682,9 @@ header {
     h2 {
         color: #FFF;
         font-weight: 900;
+    }
+    a{
+        color: #FFF;
     }
     .big-q {
         color: $light-brown;
