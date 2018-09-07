@@ -4,8 +4,10 @@
  */
 
 get_header();
+$images = get_field('masthead_images');
+$rand = array_rand($images, 1);
 ?>
-    <div id="masthead" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/mast-1.jpg;">
+    <div id="masthead" style="background-image:url(<?php echo $images[$rand]['url']; ?>">
         <div class="container">
             <div class="row">
                 <div class="col main-text">
@@ -37,10 +39,9 @@ get_header();
                     </div>
                 </div>
                 <div class="row flex-row-reverse flex-md-row">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 d-flex flex-column justify-content-between">
                         <?php the_field( 'masthead_body' ); ?>
-                        <br>
-                        <a href="/islam" class="btn light-brown">Read More</a>
+                        <div><a href="/islam" class="btn light-brown">Read More</a></div>
                     </div>
                     <div class="col-12 col-md-6 prayer-times">
                         <h3>Prayer Times</h3>
@@ -129,20 +130,18 @@ foreach ( $events as $event ) {
                     </div>
                 </div>
                 <div class="row justify-content-between">
+                <?php global $post;
+$args = array( 'posts_per_page' => 2);
+
+$myposts = get_posts( $args );
+foreach ( $myposts as $post ) : setup_postdata( $post );  ?>
                     <div class="col-12 col-lg post black-on-left">
-                        <h3>Test</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                            dicta sunt explicabo.</p>
-                        <a href="#">Read More</a>
+                        <h3><?php the_title();?></h3>
+                        <p><?php echo excerpt(25);?></p>
+                        <a href="<?php the_permalink(); ?>">Read More</a>
                     </div>
-                    <div class="col-12 col-lg post black-on-left">
-                        <h3>Test</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                            dicta sunt explicabo.</p>
-                        <a href="#">Read More</a>
-                    </div>
+                <?php endforeach; 
+wp_reset_postdata()?>    
                 </div>
             </div>
         </section>
@@ -179,7 +178,7 @@ foreach ( $events as $event ) {
             </div>
         </div>
     </section>
-    <section id="testimonials-preview" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/mast-1.jpg;">
+    <section id="testimonials-preview" style="background-image:url(<?php the_field('testimonials_background'); ?>">
         <div class="container">
             <div class="row">
                 <div class="col">
