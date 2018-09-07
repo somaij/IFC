@@ -2,16 +2,16 @@
 
 if( have_rows('prayer_times', 'option') ):
 $i=-1;
-$current_date = date("dm");
+$current_date = date("md");
     while ( have_rows('prayer_times', 'option') ) : the_row();
 
        $start = get_sub_field('start_date');
         $start_date_time = DateTime::createFromFormat('Y-m-d', $start);
-        $start_date = $start_date_time->format('dm');
+        $start_date = $start_date_time->format('md');
     
-    if($start_date <= $current_date): $i++; else: break; endif;   
-    endwhile;
+    if($start_date <= $current_date): $i++; else: break; endif; 
 
+    endwhile;
 $rows = get_field('prayer_times', 'option' ); // get all the rows
 $specific_row = $rows[$i]; // 0 will get the first row, remember that the count starts at 0
 $period_start = $specific_row['start_date']; // get the sub field value

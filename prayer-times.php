@@ -15,6 +15,7 @@ get_template_part( 'template-parts/page-header');?>
 
                 <h3>Today's Prayer Times</h3>
                 <?php get_template_part( 'template-parts/prayer-times');
+                wp_reset_query();
                     if( have_rows('prayer_times', 'option') ):?>
             </div>
         </div>
