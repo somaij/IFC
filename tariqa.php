@@ -15,8 +15,11 @@ get_template_part( 'template-parts/page-header');?>
             </div>
         </div>
 <section class="timeline">
-    <div class="container">
-        <div class="row">
+<div class="container">
+            <div class="row">
+                <div class="col">
+<ul class="timeline-list">
+        
             
 <?php
 
@@ -27,15 +30,14 @@ if( have_rows('timeline') ):
     while ( have_rows('timeline') ) : the_row();
 
         // display a sub field value
-        echo '<div class="col col-sm-2"><h2>';
-        the_sub_field('year');
-        echo '</h2></div>';
-        echo '<div class="col-sm-10"><h3>';
+
+        echo '<li>';
+        echo '<div class="content"><h3>';
         the_sub_field('title');
         echo '</h3>';
         echo '<p>';
         the_sub_field('body');
-        echo '</p></div>';
+        echo '</p></div></li>';
 
     endwhile;
 
@@ -47,6 +49,10 @@ endif;
 
 ?>
 
+            
+</ul>
+</div>
+                
             </div>
         </div>
 </section>    
