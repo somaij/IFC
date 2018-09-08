@@ -158,7 +158,7 @@ require get_template_directory() . '/inc/template-functions.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+//require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -180,3 +180,11 @@ function yoasttobottom() {
 	return 'low';
   }
   add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
+  function ja_remove_customizer_options( $wp_customize ) {
+	//$wp_customize->remove_section( 'static_front_page' );
+	//$wp_customize->remove_section( 'title_tagline'     );
+	//$wp_customize->remove_section( 'nav'               );
+	$wp_customize->remove_section( 'themes'              );
+ }
+ add_action( 'customize_register', 'ja_remove_customizer_options', 30 );

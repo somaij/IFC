@@ -8,8 +8,22 @@
  *
  * @package IFC
  */
-
+$footer_cta = get_field('footer_cta', 'option');	
+if( $footer_cta ):
 ?>
+    <section class="cta blue-on-left">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex flex-column flex-lg-row align-items-center justify-content-around">
+                    <p><?php echo $footer_cta['text']; ?></p>
+                    <a href="<?php echo $footer_cta['button_link'] ?>" class="btn">
+                        <?php echo $footer_cta['button_text']; ?>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<?php endif;?>
     <footer>
         <div class="container">
             <div class="row">
