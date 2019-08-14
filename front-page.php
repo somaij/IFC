@@ -9,7 +9,7 @@ $rand = array_rand($images, 1);
 ?>
     <div id="masthead" style="background-image:url(<?php echo $images[$rand]['url']; ?>">
         <div class="container">
-            <div class="row">
+            <div class="row main-text-wrapper d-flex align-items-center justify-content-end">
                 <div class="col main-text">
                     <?php the_field( 'masthead_header' ); ?>
 

@@ -61,7 +61,7 @@ $z = 0;
     // loop through the rows of data
    while ( have_rows('content') ) : the_row();
         $z++;?>
-                    <section id="<?php echo $z;?>">
+                    <section id="<?php echo $z;?>" class="regular-text">
                         <h2>
                             <?php the_sub_field('header'); ?>
                         </h2>

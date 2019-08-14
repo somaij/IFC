@@ -6,14 +6,17 @@
 
 get_header();
 ?>
-<section class="page-header <?php echo basename( get_page_template() ); ?> <?php if (has_post_thumbnail()): echo'image'; endif;?>"  <?php if (has_post_thumbnail()):?> style="background-image:url(<?php the_post_thumbnail_url();?>" <?php endif;?> >
+<section
+    class="page-header <?php echo basename( get_page_template() ); ?> <?php if (has_post_thumbnail()): echo'image'; endif;?>"
+    <?php if (has_post_thumbnail()):?> style="background-image:url(<?php the_post_thumbnail_url();?>" <?php endif;?>>
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col d-flex flex-column align-items-center justify-content-center">
                 <h1><?php the_field( 'page_header' ); ?></h1>
-                <div class="page-header-content"><?php the_field( 'page_header_content' ); ?></div>
-                <a href="<?php the_field( 'page_header_link' ); ?>" class="btn white"><?php the_field( 'page_header_button_text' ); ?></a>
+                <div class="page-header-content regular-text"><?php the_field( 'page_header_content' ); ?></div>
+                <a href="<?php the_field( 'page_header_link' ); ?>"
+                    class="btn white"><?php the_field( 'page_header_button_text' ); ?></a>
             </div>
         </div>
     </div>
@@ -23,19 +26,19 @@ get_header();
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-3 bio">
-            <?php if ( get_field( 'imam_image') ) { ?>
-	<img src="<?php the_field( 'imam_image' ); ?>" class="img-round"/>
-<?php } ?>
-<div><?php the_field( 'imam_name' ); ?></div>
+                <?php if ( get_field( 'imam_image') ) { ?>
+                <img src="<?php the_field( 'imam_image' ); ?>" class="img-round" />
+                <?php } ?>
+                <div><?php the_field( 'imam_name' ); ?></div>
             </div>
             <div class="col">
                 <h1><?php the_field( 'imam_section_title' ); ?></h1>
-                <div class="imam-content">
-                <?php the_field( 'imam_section_content' ); ?>
-                <a href="<?php the_field('imam_link')?>" class="btn dark-brown-on-left">Read More</a>
-                <a href="<?php the_field('tariqa_link')?>" class="btn blue-on-left">Our Tariqa</a>
-                    </div>
-                   
+                <div class="imam-content regular-text">
+                    <?php the_field( 'imam_section_content' ); ?>
+                    <a href="<?php the_field('imam_link')?>" class="btn dark-brown-on-left">Read More</a>
+                    <a href="<?php the_field('tariqa_link')?>" class="btn blue-on-left">Our Tariqa</a>
+                </div>
+
             </div>
         </div>
     </div>
@@ -46,9 +49,9 @@ get_header();
             <div class="d-none d-md-block col-3">
                 <div class="about-side">
                     <div class="sidebar__inner">
-                    <h3>Table of Contents</h3>
-                    <ul class="sidebar">
-                        <?php
+                        <h3>Table of Contents</h3>
+                        <ul class="sidebar">
+                            <?php
 // check if the repeater field has rows of data
 if( have_rows('content') ):
 $i = 0;
@@ -70,28 +73,26 @@ endif;
 
 
         ?>
-                </div>
+                    </div>
                 </div>
             </div>
             <div class="col">
 
                 <?php
-// check if the repeater field has rows of data
 if( have_rows('content') ):
 $z = 0;
-    // loop through the rows of data
    while ( have_rows('content') ) : the_row();
         $z++;?>
-                    <section id="<?php echo $z;?>">
-                        <h2>
-                            <?php the_sub_field('header'); ?>
-                        </h2>
-                        <?php
+                <section id="<?php echo $z;?>" class="regular-text">
+                    <h2>
+                        <?php the_sub_field('header'); ?>
+                    </h2>
+                    <?php
 		the_sub_field('content');
 		?>
-                    </section>
+                </section>
 
-                    <?php
+                <?php
 
    endwhile;
 
@@ -108,14 +109,14 @@ endif;
         </div>
     </div>
 </section>
-    <script>
-        jQuery(function($) {
-            $(document).ready(function() {
-                //$('.imam-content').readmore();
-               
+<script>
+    jQuery(function ($) {
+        $(document).ready(function () {
+            //$('.imam-content').readmore();
+
             $('.about-side').stickySidebar();
-                 });
         });
-    </script>
-    <?php
+    });
+</script>
+<?php
 get_footer();
