@@ -27,5 +27,6 @@ console.log( 'CustomJS' );
             }
         
         });
+        $('a[data-rel^=lightcase]').lightcase();
     });
 })(jQuery);

@@ -9,12 +9,15 @@ get_template_part( 'template-parts/page-header');?>
     <div class="container">
         <div class="row">
             <div class="col">
-                <?php if ( have_rows( 'section_1' ) ) : ?>
-                <?php while ( have_rows( 'section_1' ) ) : the_row(); ?>
+                <?php if ( have_rows( 'section_1' ) ) : 
+                    ?>
+                <?php while ( have_rows( 'section_1' ) ) : the_row();?>
+               
                 <h2>
                     <?php the_sub_field( 'title' ); ?>
                 </h2>
-                <?php the_sub_field( 'text' ); ?>
+                </a>
+                <div><?php the_sub_field( 'text' ); ?></div>
                 <?php endwhile; ?>
                 <?php endif; ?>
             </div>
@@ -46,19 +49,24 @@ get_template_part( 'template-parts/page-header');?>
 
 // check if the repeater field has rows of data
 if( have_rows('timeline') ):
-
+    $i = 0;
  	// loop through the rows of data
     while ( have_rows('timeline') ) : the_row();
+    $i++;
 
         // display a sub field value
 
         echo '<li>';
-        echo '<div class="content"><h3>';
+        echo '<div class="content"><a href="#';
+        echo $i;
+        echo '" data-rel="lightcase"><h3>';
         the_sub_field('title');
-        echo '</h3>';
-        echo '<p>';
+        echo '</h3></a>';
+        echo '<div id="';
+        echo $i;
+        echo '"><p>';
         the_sub_field('body');
-        echo '</p></div></li>';
+        echo '</p></div></div></li>';
 
     endwhile;
 

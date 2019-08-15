@@ -134,6 +134,8 @@ function ifc_scripts() {
     
 	wp_enqueue_script( 'sticky-sidebar', get_template_directory_uri() . '/assets/js/jquery.sticky-sidebar.min.js', array(), '1', true );
 
+	wp_enqueue_script( 'lightcase', get_template_directory_uri() . '/assets/js/lightcase.js', array(), '1', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

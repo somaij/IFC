@@ -28,6 +28,7 @@ $rand = array_rand($images, 1);
     'posts_per_page' => 1,
     'start_date' => date( 'Y-m-d H:i:s' )
 ) );
+if ($event_up):
 ?>
                         <h4>Next Upcoming Event:
                             <br class="d-block d-sm-none">
@@ -39,6 +40,7 @@ $rand = array_rand($images, 1);
                         }
                         ?>
                         </h4>
+                    <?php endif;?>
                     </div>
                 </div>
                 <div class="row">
