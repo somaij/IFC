@@ -6,6 +6,7 @@
 
 get_header();
 get_template_part( 'template-parts/page-header');?>
+<section class="regular-page-content">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -57,5 +58,6 @@ endif;?>
 
         </div>
     </div>
+</section>
     <?php
 get_footer();

@@ -25,6 +25,13 @@ Text Domain: ifc-theme
 /* Bootstrap Grid */
 @import "vendor/bootstrap-grid.min";
 
+/* Owl Carousel */
+@import "vendor/owl_carousel/owl.carousel";
+@import "vendor/owl_carousel/owl.theme.default";
+
+/* Lightcase */
+@import "vendor/lightcase";
+
 /* ----------------------------------------------------------------------------
  * Structure
  * ------------------------------------------------------------------------- */
@@ -37,8 +44,5 @@ Text Domain: ifc-theme
 @import "partials/base";
 
 
-/* Owl Carousel */
-@import "vendor/owl_carousel/owl.carousel";
-@import "vendor/owl_carousel/owl.theme.default";
-@import "vendor/lightcase";
+
 

@@ -6,6 +6,7 @@
 
 get_header();
 get_template_part( 'template-parts/page-header');?>
+<section class="tariqa-content">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -17,7 +18,7 @@ get_template_part( 'template-parts/page-header');?>
                     <?php the_sub_field( 'title' ); ?>
                 </h2>
                 </a>
-                <div><?php the_sub_field( 'text' ); ?></div>
+                <div class="regular-text"><?php the_sub_field( 'text' ); ?></div>
                 <?php endwhile; ?>
                 <?php endif; ?>
             </div>
@@ -29,7 +30,7 @@ get_template_part( 'template-parts/page-header');?>
             <?php if ( have_rows( 'section_2' ) ) : ?>
 	<?php while ( have_rows( 'section_2' ) ) : the_row(); ?>
 		<h2><?php the_sub_field( 'title' ); ?></h2>
-        <?php the_sub_field( 'text' ); ?>
+        <div class="regular-text"><?php the_sub_field( 'text' ); ?></div>
         <a href="<?php the_sub_field( 'button_link' ); ?>" class="btn light-brown-on-left"><?php the_sub_field( 'button_text' ); ?></a>
 		
 		
@@ -38,7 +39,8 @@ get_template_part( 'template-parts/page-header');?>
             </div>
         </div>
     </div>
-    <section class="timeline">
+                </section>
+    <section class="timeline" style="background:linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url(<?php the_field('timeline_bg');?>);" >
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -59,12 +61,18 @@ if( have_rows('timeline') ):
         echo '<li>';
         echo '<div class="content"><a href="#';
         echo $i;
-        echo '" data-rel="lightcase"><h3>';
+        echo '" data-rel="lightcase:tariqa"><h3>';
         the_sub_field('title');
-        echo '</h3></a>';
+        echo '<br><small>';
+        the_sub_field('year');
+        echo '</small></h3></a>';
         echo '<div id="';
         echo $i;
-        echo '"><p>';
+        echo '" class="tariqa-popup regular-text" style="display:none;"><h3>';
+        the_sub_field('title');
+        echo '<br><small>';
+        the_sub_field('year');
+        echo '</small></h3><p>';
         the_sub_field('body');
         echo '</p></div></div></li>';
 
