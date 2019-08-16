@@ -352,7 +352,7 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 #masthead{background-size:cover;background-repeat:no-repeat;color:#FFF !important;background-attachment:fixed}
 #masthead .main-text-wrapper{height:400px}
 #masthead .main-text a{font-size:20px}
-#masthead .overlay{background-color:rgba(0,0,0,0.5);padding:2rem 0 3rem;-webkit-animation:fadeIn ease-in 1;animation:fadeIn ease-in 1;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-duration:1s;animation-duration:1s}
+#masthead .overlay{background-color:rgba(0,0,0,0.5);padding:2rem 0 3rem;-webkit-animation:fadeIn ease-in 1;animation:fadeIn ease-in 1;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-duration:1s;animation-duration:1s;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 #masthead .overlay a{color:#FFF}
 #masthead .overlay .text-center{margin-bottom:1rem}
 #masthead h1{color:inherit;font-weight:600;margin:0}
@@ -365,10 +365,10 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 #masthead a{font-size:18px}
 #masthead .prayer-times{margin-top:1rem}
 #blogsevents h2{font-weight:900;margin-bottom:1rem}
-#events-preview .event{border-bottom:1px solid #b87963;padding:.6rem 1rem;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}
+#events-preview .event{border-bottom:1px solid #b87963;padding:.6rem 1rem;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}
 #events-preview .event h3{font-size:1.3rem}
 #events-preview .event a{float:right;margin-top:.2rem;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}
-#blog-preview .post{padding:1rem 2rem;border-radius:7px;margin-bottom:1rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
+#blog-preview .post{padding:1rem 2rem;border-radius:7px;margin-bottom:1rem;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
 #blog-preview .post h3{font-size:2rem}
 #blog-preview a{color:#FFF;font-weight:bold}
 .section-header-links{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-style:italic}
@@ -383,7 +383,7 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 #testimonials-preview a{color:#FFF}
 #testimonials-preview .big-q{color:#b87963;font-size:108px;font-weight:900;line-height:1;font-family:'Nunito Sans','Lato',sans-serif}
 #testimonials-preview .author{font-size:1.5rem}
-#testimonials-preview .testimonial{background-color:rgba(255,255,255,0.7);padding:2rem;border-radius:7px;margin:1rem}
+#testimonials-preview .testimonial{background-color:rgba(255,255,255,0.7);padding:2rem;border-radius:7px;margin:1rem;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 #testimonials-preview .testimonial h3{font-size:28px;font-weight:500;font-family:'Lato',sans-serif;font-style:italic}
 #testimonials-preview .footer,#testimonials-preview .footer a{color:#b87963}
 footer{padding:3rem 0 0;background-color:#EEE}
@@ -435,7 +435,7 @@ footer #copyright a{color:#b87963}
 .timeline-list h3:hover{color:#b87963;border-color:#b87963}
 .timeline-list:before{content:"";border-left:5px solid #b87963;left:-0.25em;top:1rem;height:75%;position:absolute;bottom:0;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-animation:scaleVertical 3s 1s ease both 1;animation:scaleVertical 3s 1s ease both 1}
 .timeline-list li{list-style-type:none;margin:0 0 3em 0;padding:0 2em 0 2em;position:relative}
-.timeline-list li .content{-webkit-animation:revealFromLeft .5s 0s ease both 1;animation:revealFromLeft .5s 0s ease both 1}
+.timeline-list li .content{-webkit-animation:revealFromLeft .5s 0s ease both 1;animation:revealFromLeft .5s 0s ease both 1;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 .timeline-list li:before{content:"";position:absolute;top:.6rem;left:-1.05rem;width:30px;height:30px;border-radius:50%;background:none repeat scroll 0 0 #FFF;border:5px solid #b87963;-webkit-animation:revealScaleUp .75s 0s ease both 1;animation:revealScaleUp .75s 0s ease both 1}
 .timeline-list li:nth-child(1):before{-webkit-animation-delay:.85s;animation-delay:.85s}
 .timeline-list li:nth-child(1) .content{-webkit-animation-delay:1.05s;animation-delay:1.05s}
@@ -531,7 +531,7 @@ footer #copyright a{color:#b87963}
 .align-self-sm-baseline{-ms-flex-item-align:baseline !important;-webkit-align-self:baseline !important;align-self:baseline !important}
 .align-self-sm-stretch{-ms-flex-item-align:stretch !important;-webkit-align-self:stretch !important;-ms-grid-row-align:stretch !important;align-self:stretch !important}
 }@media screen and (min-width:576px){#masthead .main-text a:last-child{margin-left:1rem}
-#blogsevents{padding:3rem 0;background-size:cover;color:#FFF;background-attachment:fixed}
+#blogsevents{padding:3rem 0;background-size:cover !important;color:#FFF;background-attachment:fixed !important}
 #events-preview a{color:#FFF}
 #events-preview .event{height:175px;border:0;border-radius:7px;font-size:14px}
 .section-header-links{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}

@@ -92,7 +92,7 @@ while ( $loop->have_posts() ) : $loop->the_post();?>
             </div>
         </div>
     </section>
-    <div id="blogsevents" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/eventsblogs.jpg;">
+    <div id="blogsevents" style="background:linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)),url(<?php echo get_stylesheet_directory_uri(); ?>/eventsblogs.jpg;">
         <section id="events-preview">
             <div class="container">
                 <div class="row">
