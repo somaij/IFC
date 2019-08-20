@@ -349,7 +349,7 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 #wp-calendar tfoot #next{font-size:10px;text-transform:uppercase;text-align:right}
 #wp-calendar tfoot #prev{font-size:10px;text-transform:uppercase;padding-top:10px}
 .size-auto,.size-full,.size-large,.size-medium,.size-thumbnail{max-width:100%;height:auto}
-#masthead{background-size:cover;background-repeat:no-repeat;color:#FFF !important;background-attachment:fixed}
+#masthead{background-size:cover !important;background-repeat:no-repeat !important;color:#FFF !important;background-attachment:fixed !important}
 #masthead .main-text-wrapper{height:400px}
 #masthead .main-text a{font-size:20px}
 #masthead .overlay{background-color:rgba(0,0,0,0.5);padding:2rem 0 3rem;-webkit-animation:fadeIn ease-in 1;animation:fadeIn ease-in 1;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-duration:1s;animation-duration:1s;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}

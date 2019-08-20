@@ -7,7 +7,7 @@ get_header();
 $images = get_field('masthead_images');
 $rand = array_rand($images, 1);
 ?>
-    <div id="masthead" style="background-image:url(<?php echo $images[$rand]['url']; ?>">
+    <div id="masthead" style="background:linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.40)),url(<?php echo $images[$rand]['url']; ?>;">
         <div class="container">
             <div class="row main-text-wrapper d-flex align-items-center justify-content-end">
                 <div class="col main-text">
