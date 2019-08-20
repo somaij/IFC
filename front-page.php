@@ -186,27 +186,6 @@ wp_reset_postdata()?>
             </div>
         </div>
     </section>
-    <section id="gallery-preview">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2 class="section-header">
-                        <?php the_field( 'gallery_header' ); ?>
-                    </h2>
-                </div>
-                <div class="col-12 col-sm-6 section-header-links">
-                    <a href="<?php the_field( 'gallery_all_link' ); ?>">
-                        <?php the_field( 'gallery_all_text' ); ?>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <?php echo do_shortcode('[foogallery id="4341"]'); ?>
-                </div>
-            </div>
-        </div>
-    </section>
     <section id="testimonials-preview" style="background-image:url(<?php the_field('testimonials_background'); ?>">
         <div class="container">
             <div class="row">
@@ -253,7 +232,7 @@ wp_reset_postdata()?>
                                 items: 2
                             },
                             1000: {
-                                items: 4
+                                items: 3
                             }
                         }
                     });
