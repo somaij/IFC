@@ -27,11 +27,12 @@
 		<?php
 		
 		else :?>
-
-		<div class="col-12 col-md-6" id="post-<?php the_ID(); ?>" class="archive-result">
-			<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+		<a href="<?php the_permalink();?>" class="col-12 col-md-6 archive-result">
+		<div>
+			<h3><?php the_title(); ?></h3>
 			<p><?php the_excerpt();?></p>
-			<br><a href="<?php the_permalink();?>" class="btn light-brown">Read More</a>
+			<br><span class="read-more">Read More</span>
 		</div>
+		</a>
 		<?php endif;
 		?>

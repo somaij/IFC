@@ -58,6 +58,7 @@ img {
 a {
     color: #444;
     text-decoration: none;
+    transition: 250ms all ease;
 }
 
 a:hover {
@@ -69,7 +70,7 @@ a:focus {
 }
 
 a:hover,
-a:active {
+a:active, button {
     outline: 0;
 }
 
@@ -229,6 +230,9 @@ textarea {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12a0bb', endColorstr='#a612a0bb', GradientType=1);
         /* IE6-9 fallback on horizontal gradient */
         color: #FFF;
+        &:hover{
+            background-color:rgba(18, 160, 187, 1);
+        }
     }
     &.light-brown {
         background: -moz-linear-gradient(45deg, rgba(184, 121, 99, 1) 0%, rgba(184, 121, 99, 0.65) 100%);
@@ -240,6 +244,9 @@ textarea {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b87963', endColorstr='#a6b87963', GradientType=1);
         /* IE6-9 fallback on horizontal gradient */
         color: #FFF;
+        &:hover{
+            background-color:rgba(184, 121, 99, 1);
+        }
     }
     &.dark-brown {
         background: -moz-linear-gradient(45deg, rgba(69, 45, 32, 1) 0%, rgba(69, 45, 32, 0.65) 100%);
@@ -251,6 +258,9 @@ textarea {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#452d20', endColorstr='#a6452d20', GradientType=1);
         /* IE6-9 fallback on horizontal gradient */
         color: #FFF;
+        &:hover{
+            background-color:rgba(69, 45, 32, 1);
+        }
     }
     &.white {
         background-color: #FFF;
@@ -459,6 +469,13 @@ header {
     padding: 1.5rem 0;
     p {
         font-size: 1.1rem;
+        @media screen and (min-width:992px){
+            padding-right:1rem;
+        }
+        @media screen and (max-width:991px){
+            text-align: center;
+            margin-bottom:1rem;
+        }
     }
     a.btn {
         background-color: #FFF;
@@ -469,6 +486,11 @@ header {
         font-weight: bold;
         min-width: 150px;
         text-align: center;
+        border:1px solid #FFF;
+        &:hover{
+            background-color:transparent;
+            color:#FFF !important;
+        }
     }
     &.blue-on-left{
         a.btn{
@@ -593,4 +615,34 @@ header {
     background: -ms-linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 1) 100%);
     background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1);
+}
+
+.archive-result{
+    > div{
+        padding:2rem;
+        display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    transition: 250ms all ease;
+    border-radius:7px;
+        h3{
+            color:$light-brown;
+            font-size:2rem;
+            transition: 250ms all ease;
+        }
+        .read-more{
+            color:$light-brown;
+            font-weight:700;
+            transition: 250ms all ease;
+        }
+    }
+    &:hover{
+        >div{
+            background-color:#FAFAFA;
+            h3, .read-more{
+                color:$dark-brown;
+            }
+        }
+    }
 }
